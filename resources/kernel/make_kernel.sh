@@ -78,10 +78,35 @@ make_initramfs() {
     pushd_quiet "$kernel_dir"
 
     # Prepare initramfs directory.
-    mkdir -p initramfs/{bin,dev,etc,home,mnt,proc,sys,usr}
+    mkdir -p initramfs/{bin,dev,etc,home,mnt,proc,sys,usr,dropbear}
     # Copy busybox.
     echo "Copying busybox to the initramfs directory..."
+    pwd
+    echo "$busybox_rootfs"
     cp -r "$busybox_rootfs"/* initramfs/
+    pwd
+
+    CURRENT_PATH=$(pwd)
+    
+    #Copy dropbear
+    cd /home/arpitchauhan/Desktop/sem7/COL732/vmm-reference/resources/kernel/dropbear-2022.82
+    ./configure --enable-static
+    make PROGRAMS="dropbear dbclient dropbearkey dropbearconvert scp" install DESTDIR=$CURRENT_PATH/initramfs/dropbear/
+
+    #Copy bash
+    cd /home/arpitchauhan/Desktop/sem7/COL732/vmm-reference/resources/kernel/bash-4.2
+    ./configure --enable-static-link    
+    make 
+    make install DESTDIR=$CURRENT_PATH/initramfs/bash/
+
+    #Copy Python3
+    cp /home/arpitchauhan/Desktop/sem7/COL732/vmm-reference/python3 $CURRENT_PATH/initramfs/bin/
+    
+    # Restore
+    cd $CURRENT_PATH
+
+    echo "Reached here!"
+    pwd
 
     # Make a block device and a console.
     pushd_quiet initramfs/dev

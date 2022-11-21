@@ -1,0 +1,3415 @@
+Busybox Version: 1.32.1
+Config: busybox_1_32_1_static_config
+Starting kernel build.
+Downloading kernel from https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.4.81.tar.xz
+Extracting kernel sources...
+Copying kernel config...
+Changing working directory to /tmp/tmp.JoFxhJO7Ni...
+Downloading busybox...
+Extracting busybox...
+Building busybox...
+  GEN     include/applets.h
+  GEN     include/usage.h
+  GEN     sysklogd/Kbuild
+  GEN     sysklogd/Config.in
+  GEN     printutils/Kbuild
+  GEN     printutils/Config.in
+  GEN     archival/Kbuild
+  GEN     archival/Config.in
+  GEN     archival/libarchive/Kbuild
+  GEN     util-linux/Kbuild
+  GEN     util-linux/Config.in
+  GEN     util-linux/volume_id/Kbuild
+  GEN     util-linux/volume_id/Config.in
+  GEN     applets/Kbuild
+  GEN     loginutils/Kbuild
+  GEN     loginutils/Config.in
+  GEN     console-tools/Kbuild
+  GEN     console-tools/Config.in
+  GEN     scripts/Kbuild
+  GEN     editors/Kbuild
+  GEN     editors/Config.in
+  GEN     coreutils/Kbuild
+  GEN     coreutils/Config.in
+  GEN     coreutils/libcoreutils/Kbuild
+  GEN     shell/Kbuild
+  GEN     shell/Config.in
+  GEN     procps/Kbuild
+  GEN     procps/Config.in
+  GEN     selinux/Kbuild
+  GEN     selinux/Config.in
+  GEN     findutils/Kbuild
+  GEN     findutils/Config.in
+  GEN     libbb/Kbuild
+  GEN     libbb/Config.in
+  GEN     mailutils/Kbuild
+  GEN     mailutils/Config.in
+  GEN     init/Kbuild
+  GEN     init/Config.in
+  GEN     libpwdgrp/Kbuild
+  GEN     debianutils/Kbuild
+  GEN     debianutils/Config.in
+  GEN     klibc-utils/Kbuild
+  GEN     klibc-utils/Config.in
+  GEN     miscutils/Kbuild
+  GEN     miscutils/Config.in
+  GEN     e2fsprogs/Kbuild
+  GEN     e2fsprogs/Config.in
+  GEN     modutils/Kbuild
+  GEN     modutils/Config.in
+  GEN     networking/Kbuild
+  GEN     networking/Config.in
+  GEN     networking/libiproute/Kbuild
+  GEN     networking/udhcp/Kbuild
+  GEN     networking/udhcp/Config.in
+  GEN     runit/Kbuild
+  GEN     runit/Config.in
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/basic/split-include
+  HOSTCC  scripts/basic/docproc
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/kxgettext.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/lex.zconf.c
+  HOSTCC  scripts/kconfig/mconf.o
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf -s Config.in
+#
+# using defaults found in .config
+#
+  SPLIT   include/autoconf.h -> include/config/*
+  GEN     include/bbconfigopts.h
+  GEN     include/common_bufsiz.h
+  GEN     include/embedded_scripts.h
+  HOSTCC  applets/usage
+  HOSTCC  applets/applet_tables
+  GEN     include/usage_compressed.h
+  GEN     include/applet_tables.h include/NUM_APPLETS.h
+  GEN     include/applet_tables.h include/NUM_APPLETS.h
+  HOSTCC  applets/usage_pod
+  CC      applets/applets.o
+  LD      applets/built-in.o
+  DOC     busybox.pod
+  DOC     BusyBox.txt
+  DOC     busybox.1
+  DOC     BusyBox.html
+  LD      archival/built-in.o
+  CC      archival/bbunzip.o
+  CC      archival/bzip2.o
+  LD      archival/libarchive/built-in.o
+  CC      archival/libarchive/common.o
+  LD      console-tools/built-in.o
+  CC      console-tools/chvt.o
+  CC      archival/libarchive/data_align.o
+  CC      console-tools/clear.o
+  LD      coreutils/built-in.o
+  CC      coreutils/basename.o
+  CC      archival/libarchive/data_extract_all.o
+  CC      console-tools/deallocvt.o
+  CC      coreutils/cat.o
+  CC      archival/libarchive/data_extract_to_command.o
+  CC      console-tools/dumpkmap.o
+  CC      coreutils/chgrp.o
+  CC      archival/libarchive/data_extract_to_stdout.o
+  CC      coreutils/chmod.o
+  CC      console-tools/fgconsole.o
+  CC      archival/libarchive/data_skip.o
+  CC      console-tools/kbd_mode.o
+  CC      coreutils/chown.o
+  CC      archival/cpio.o
+  CC      archival/libarchive/decompress_bunzip2.o
+  CC      console-tools/loadfont.o
+  CC      coreutils/chroot.o
+  CC      archival/dpkg.o
+  CC      coreutils/cksum.o
+  CC      console-tools/loadkmap.o
+  CC      archival/libarchive/decompress_gunzip.o
+  CC      coreutils/comm.o
+  CC      console-tools/openvt.o
+  CC      coreutils/cp.o
+  CC      console-tools/reset.o
+  CC      coreutils/cut.o
+  CC      console-tools/resize.o
+  CC      archival/libarchive/decompress_unlzma.o
+  CC      console-tools/setconsole.o
+  CC      coreutils/date.o
+  CC      archival/dpkg_deb.o
+  CC      console-tools/setkeycodes.o
+  CC      archival/libarchive/decompress_unxz.o
+  CC      archival/gzip.o
+  CC      coreutils/dd.o
+  CC      console-tools/setlogcons.o
+  CC      console-tools/showkey.o
+  CC      coreutils/df.o
+  AR      console-tools/lib.a
+  LD      coreutils/libcoreutils/built-in.o
+  CC      coreutils/libcoreutils/cp_mv_stat.o
+  CC      coreutils/dirname.o
+  CC      coreutils/libcoreutils/getopt_mk_fifo_nod.o
+  CC      archival/libarchive/filter_accept_all.o
+  CC      archival/lzop.o
+  CC      coreutils/dos2unix.o
+  AR      coreutils/libcoreutils/lib.a
+  CC      coreutils/du.o
+  CC      archival/libarchive/filter_accept_list.o
+  CC      archival/rpm.o
+  CC      archival/libarchive/filter_accept_list_reassign.o
+  CC      coreutils/echo.o
+  CC      archival/libarchive/filter_accept_reject_list.o
+  CC      coreutils/env.o
+  CC      archival/tar.o
+  CC      archival/unzip.o
+  CC      archival/libarchive/find_list_entry.o
+  CC      coreutils/expand.o
+  CC      archival/libarchive/get_header_ar.o
+  CC      coreutils/expr.o
+  CC      coreutils/factor.o
+  AR      archival/lib.a
+  CC      coreutils/false.o
+  CC      archival/libarchive/get_header_cpio.o
+  CC      archival/libarchive/get_header_tar.o
+  CC      archival/libarchive/get_header_tar_bz2.o
+  CC      coreutils/fold.o
+  CC      coreutils/head.o
+  CC      coreutils/hostid.o
+  CC      archival/libarchive/get_header_tar_gz.o
+  CC      archival/libarchive/get_header_tar_lzma.o
+  CC      archival/libarchive/get_header_tar_xz.o
+  CC      coreutils/id.o
+  CC      coreutils/install.o
+  LD      debianutils/built-in.o
+  CC      archival/libarchive/header_list.o
+  CC      debianutils/pipe_progress.o
+  CC      debianutils/run_parts.o
+  CC      archival/libarchive/header_skip.o
+  CC      coreutils/link.o
+  LD      klibc-utils/built-in.o
+  CC      klibc-utils/nuke.o
+  CC      archival/libarchive/header_verbose_list.o
+  CC      coreutils/ln.o
+  CC      debianutils/start_stop_daemon.o
+  CC      klibc-utils/resume.o
+  CC      archival/libarchive/init_handle.o
+  CC      coreutils/logname.o
+  AR      klibc-utils/lib.a
+  CC      coreutils/ls.o
+  CC      debianutils/which.o
+  CC      archival/libarchive/lzo1x_1.o
+  CC      archival/libarchive/lzo1x_1o.o
+  AR      debianutils/lib.a
+  CC      archival/libarchive/lzo1x_d.o
+  LD      e2fsprogs/built-in.o
+  CC      coreutils/md5_sha1_sum.o
+  CC      coreutils/mkdir.o
+  CC      e2fsprogs/chattr.o
+  CC      archival/libarchive/open_transformer.o
+  CC      archival/libarchive/seek_by_jump.o
+  CC      coreutils/mkfifo.o
+  CC      e2fsprogs/e2fs_lib.o
+  CC      e2fsprogs/fsck.o
+  CC      coreutils/mknod.o
+  CC      archival/libarchive/seek_by_read.o
+  CC      coreutils/mktemp.o
+  CC      archival/libarchive/unpack_ar_archive.o
+  CC      e2fsprogs/lsattr.o
+  CC      coreutils/mv.o
+  CC      archival/libarchive/unsafe_prefix.o
+  CC      coreutils/nice.o
+  CC      archival/libarchive/unsafe_symlink_target.o
+  AR      e2fsprogs/lib.a
+  CC      coreutils/nl.o
+  CC      coreutils/nohup.o
+  AR      archival/libarchive/lib.a
+  LD      editors/built-in.o
+  CC      editors/awk.o
+  CC      coreutils/nproc.o
+  LD      findutils/built-in.o
+  CC      findutils/find.o
+  CC      findutils/grep.o
+  CC      coreutils/od.o
+  CC      coreutils/paste.o
+  CC      findutils/xargs.o
+  CC      editors/cmp.o
+  CC      coreutils/printenv.o
+  CC      coreutils/printf.o
+  CC      editors/diff.o
+  AR      findutils/lib.a
+  CC      coreutils/pwd.o
+  CC      editors/ed.o
+  CC      coreutils/readlink.o
+  CC      coreutils/realpath.o
+  LD      init/built-in.o
+  CC      init/bootchartd.o
+  CC      coreutils/rm.o
+  CC      init/halt.o
+  CC      editors/patch.o
+  CC      init/init.o
+  CC      coreutils/rmdir.o
+  CC      coreutils/seq.o
+  CC      editors/sed.o
+  CC      coreutils/shred.o
+  CC      editors/vi.o
+  AR      init/lib.a
+  CC      coreutils/shuf.o
+  LD      libbb/built-in.o
+  CC      libbb/appletlib.o
+  CC      coreutils/sleep.o
+  CC      coreutils/sort.o
+  CC      coreutils/split.o
+  CC      libbb/ask_confirmation.o
+  CC      libbb/auto_string.o
+  CC      coreutils/stat.o
+  CC      libbb/bb_askpass.o
+  CC      libbb/bb_bswap_64.o
+  CC      coreutils/stty.o
+  CC      coreutils/sum.o
+  CC      libbb/bb_cat.o
+  CC      libbb/bb_do_delay.o
+  CC      libbb/bb_getgroups.o
+  CC      coreutils/sync.o
+  CC      libbb/bb_getsockname.o
+  CC      libbb/bb_pwd.o
+  LD      libpwdgrp/built-in.o
+  CC      libpwdgrp/pwd_grp.o
+  CC      coreutils/tac.o
+  AR      editors/lib.a
+  CC      coreutils/tail.o
+  CC      libbb/bb_qsort.o
+  CC      libbb/bb_strtonum.o
+  CC      libpwdgrp/uidgid_get.o
+  CC      coreutils/tee.o
+  CC      libbb/capability.o
+  CC      libbb/change_identity.o
+  AR      libpwdgrp/lib.a
+  CC      libbb/chomp.o
+  CC      coreutils/test.o
+  CC      coreutils/test_ptr_hack.o
+  CC      coreutils/timeout.o
+  CC      libbb/common_bufsiz.o
+  LD      loginutils/built-in.o
+  CC      loginutils/add-remove-shell.o
+  CC      loginutils/addgroup.o
+  CC      libbb/compare_string_array.o
+  CC      coreutils/touch.o
+  CC      coreutils/tr.o
+  CC      loginutils/adduser.o
+  CC      libbb/concat_path_file.o
+  CC      loginutils/chpasswd.o
+  CC      libbb/concat_subpath_file.o
+  CC      libbb/copy_file.o
+  CC      coreutils/true.o
+  CC      loginutils/cryptpw.o
+  CC      coreutils/truncate.o
+  CC      loginutils/deluser.o
+  CC      coreutils/tty.o
+  CC      libbb/copyfd.o
+  CC      libbb/correct_password.o
+  CC      loginutils/getty.o
+  CC      coreutils/uname.o
+  CC      coreutils/uniq.o
+  CC      libbb/crc32.o
+  CC      libbb/default_error_retval.o
+  CC      loginutils/login.o
+  CC      coreutils/unlink.o
+  CC      coreutils/usleep.o
+  CC      libbb/device_open.o
+  CC      libbb/dump.o
+  CC      coreutils/uudecode.o
+  CC      loginutils/passwd.o
+  CC      loginutils/su.o
+  CC      coreutils/uuencode.o
+  LD      mailutils/built-in.o
+  CC      mailutils/mail.o
+  CC      loginutils/sulogin.o
+  CC      coreutils/wc.o
+  CC      libbb/duration.o
+  CC      loginutils/vlock.o
+  CC      mailutils/makemime.o
+  CC      libbb/endofname.o
+  CC      coreutils/who.o
+  AR      loginutils/lib.a
+  CC      libbb/executable.o
+  CC      mailutils/popmaildir.o
+  CC      mailutils/reformime.o
+  CC      coreutils/whoami.o
+  CC      libbb/fclose_nonstdin.o
+  CC      libbb/fflush_stdout_and_exit.o
+  CC      coreutils/yes.o
+  CC      libbb/fgets_str.o
+  CC      mailutils/sendmail.o
+  LD      miscutils/built-in.o
+  CC      miscutils/adjtimex.o
+  AR      coreutils/lib.a
+  CC      libbb/find_mount_point.o
+  CC      miscutils/bc.o
+  CC      libbb/find_pid_by_name.o
+  AR      mailutils/lib.a
+  LD      modutils/built-in.o
+  CC      modutils/modinfo.o
+  CC      libbb/find_root_device.o
+  CC      modutils/modprobe-small.o
+  CC      libbb/full_write.o
+  CC      miscutils/beep.o
+  CC      libbb/get_console.o
+  CC      libbb/get_cpu_count.o
+  CC      miscutils/chat.o
+  CC      libbb/get_last_path_component.o
+  CC      modutils/modutils.o
+  CC      libbb/get_line_from_file.o
+  CC      libbb/get_shell_name.o
+  AR      modutils/lib.a
+  CC      libbb/get_volsize.o
+  LD      networking/built-in.o
+  CC      networking/arp.o
+  CC      networking/arping.o
+  CC      libbb/getopt32.o
+  CC      libbb/getopt_allopts.o
+  CC      networking/brctl.o
+  CC      networking/dnsd.o
+  CC      libbb/getpty.o
+  CC      libbb/hash_md5_sha.o
+  CC      libbb/herror_msg.o
+  CC      networking/ether-wake.o
+  CC      networking/ftpd.o
+  CC      libbb/human_readable.o
+  CC      networking/ftpgetput.o
+  CC      libbb/in_ether.o
+  CC      libbb/inet_cksum.o
+  CC      libbb/inet_common.o
+  CC      miscutils/conspy.o
+  CC      networking/hostname.o
+  CC      libbb/inode_hash.o
+  CC      networking/httpd.o
+  CC      networking/ifconfig.o
+  CC      libbb/isdirectory.o
+  CC      miscutils/crond.o
+  CC      libbb/isqrt.o
+  CC      libbb/kernel_version.o
+  CC      libbb/last_char_is.o
+  LD      networking/libiproute/built-in.o
+  CC      networking/libiproute/ip_parse_common_args.o
+  CC      miscutils/crontab.o
+  CC      libbb/lineedit.o
+  CC      networking/libiproute/ipaddress.o
+  CC      networking/ifenslave.o
+  CC      miscutils/devmem.o
+  CC      networking/ifplugd.o
+  CC      miscutils/fbsplash.o
+  CC      networking/libiproute/iplink.o
+  CC      miscutils/hdparm.o
+  CC      networking/ifupdown.o
+  CC      networking/libiproute/ipneigh.o
+  CC      libbb/lineedit_ptr_hack.o
+  CC      libbb/llist.o
+  CC      networking/libiproute/iproute.o
+  CC      libbb/logenv.o
+  CC      libbb/login.o
+  CC      networking/inetd.o
+  CC      libbb/loop.o
+  CC      miscutils/hexedit.o
+  CC      networking/libiproute/iprule.o
+  CC      libbb/make_directory.o
+  CC      miscutils/i2c_tools.o
+  CC      networking/libiproute/iptunnel.o
+  CC      libbb/makedev.o
+  CC      networking/interface.o
+  CC      libbb/match_fstype.o
+  CC      libbb/messages.o
+  CC      networking/libiproute/libnetlink.o
+  CC      libbb/missing_syscalls.o
+  CC      libbb/mode_string.o
+  CC      networking/libiproute/ll_addr.o
+  CC      miscutils/less.o
+  CC      networking/ip.o
+  CC      libbb/nuke_str.o
+  CC      networking/libiproute/ll_map.o
+  CC      networking/ipcalc.o
+  CC      libbb/obscure.o
+  CC      networking/libiproute/ll_proto.o
+  CC      networking/isrv.o
+  CC      libbb/parse_config.o
+  CC      networking/libiproute/ll_types.o
+  CC      libbb/parse_mode.o
+  CC      networking/libiproute/rt_names.o
+  CC      networking/isrv_identd.o
+  CC      miscutils/lsscsi.o
+  CC      libbb/percent_decode.o
+  CC      networking/nameif.o
+  CC      networking/libiproute/rtm_map.o
+  CC      miscutils/makedevs.o
+  CC      libbb/perror_msg.o
+  CC      networking/libiproute/utils.o
+  CC      networking/nbd-client.o
+  CC      libbb/perror_nomsg.o
+  CC      miscutils/man.o
+  CC      libbb/perror_nomsg_and_die.o
+  CC      networking/nc.o
+  AR      networking/libiproute/lib.a
+  CC      libbb/pidfile.o
+  LD      networking/udhcp/built-in.o
+  CC      networking/udhcp/arpping.o
+  CC      miscutils/microcom.o
+  CC      libbb/platform.o
+  CC      networking/udhcp/common.o
+  CC      miscutils/mt.o
+  CC      libbb/print_flags.o
+  CC      networking/netstat.o
+  CC      miscutils/nandwrite.o
+  CC      libbb/print_numbered_lines.o
+  CC      networking/udhcp/d6_dhcpc.o
+  CC      libbb/printable.o
+  CC      miscutils/partprobe.o
+  CC      networking/nslookup.o
+  CC      miscutils/raidautorun.o
+  CC      libbb/printable_string.o
+  CC      miscutils/readahead.o
+  CC      libbb/process_escape_sequence.o
+  CC      networking/ntpd.o
+  CC      networking/udhcp/d6_packet.o
+  CC      libbb/procps.o
+  CC      miscutils/runlevel.o
+  CC      networking/udhcp/d6_socket.o
+  CC      miscutils/rx.o
+  CC      libbb/progress.o
+  CC      networking/udhcp/dhcpc.o
+  CC      miscutils/setfattr.o
+  CC      libbb/ptr_to_globals.o
+  CC      libbb/pw_encrypt.o
+  CC      miscutils/setserial.o
+  CC      networking/parse_pasv_epsv.o
+  CC      networking/ping.o
+  CC      miscutils/strings.o
+  CC      miscutils/time.o
+  CC      networking/udhcp/dhcpd.o
+  CC      networking/pscan.o
+  CC      libbb/read.o
+  CC      miscutils/ts.o
+  CC      networking/route.o
+  CC      libbb/read_key.o
+  CC      miscutils/ttysize.o
+  CC      libbb/read_printf.o
+  CC      networking/udhcp/dhcprelay.o
+  CC      miscutils/ubi_tools.o
+  CC      networking/slattach.o
+  CC      libbb/recursive_action.o
+  CC      miscutils/ubirename.o
+  CC      networking/udhcp/domain_codec.o
+  CC      networking/ssl_client.o
+  CC      libbb/remove_file.o
+  CC      miscutils/volname.o
+  CC      networking/udhcp/dumpleases.o
+  CC      networking/tc.o
+  CC      miscutils/watchdog.o
+  CC      libbb/replace.o
+  CC      networking/udhcp/packet.o
+  AR      miscutils/lib.a
+  CC      libbb/rtc.o
+  LD      printutils/built-in.o
+  CC      printutils/lpd.o
+  CC      networking/tcpudp.o
+  CC      networking/udhcp/signalpipe.o
+  CC      libbb/run_shell.o
+  CC      networking/udhcp/socket.o
+  CC      printutils/lpr.o
+  CC      networking/tcpudp_perhost.o
+  CC      libbb/safe_gethostname.o
+  AR      networking/udhcp/lib.a
+  CC      libbb/safe_poll.o
+  AR      printutils/lib.a
+  CC      networking/telnet.o
+  CC      networking/telnetd.o
+  CC      networking/tftp.o
+  CC      libbb/safe_strncpy.o
+  CC      libbb/safe_write.o
+  CC      libbb/securetty.o
+  CC      libbb/setup_environment.o
+  CC      networking/tls.o
+  CC      networking/tls_aes.o
+  CC      networking/tls_aesgcm.o
+  CC      libbb/signals.o
+  CC      networking/tls_fe.o
+  CC      libbb/simplify_path.o
+  CC      networking/tls_pstm.o
+  CC      libbb/single_argv.o
+  CC      libbb/skip_whitespace.o
+  LD      procps/built-in.o
+  CC      procps/free.o
+  CC      procps/fuser.o
+  CC      libbb/speed_table.o
+  CC      libbb/str_tolower.o
+  CC      procps/iostat.o
+  CC      libbb/strrstr.o
+  LD      runit/built-in.o
+  CC      runit/chpst.o
+  CC      networking/tls_pstm_montgomery_reduce.o
+  CC      libbb/sysconf.o
+  CC      procps/kill.o
+  CC      networking/tls_pstm_mul_comba.o
+  CC      runit/runsv.o
+  CC      libbb/time.o
+  CC      procps/lsof.o
+  CC      networking/tls_pstm_sqr_comba.o
+  CC      procps/mpstat.o
+  CC      libbb/trim.o
+  CC      networking/tls_rsa.o
+  CC      runit/runsvdir.o
+  CC      libbb/u_signal_names.o
+  CC      networking/traceroute.o
+  CC      runit/sv.o
+  CC      libbb/ubi.o
+  CC      procps/nmeter.o
+  CC      libbb/udp_io.o
+  CC      networking/tunctl.o
+  CC      runit/svlogd.o
+  CC      libbb/unicode.o
+  CC      networking/vconfig.o
+  CC      procps/pgrep.o
+  CC      networking/wget.o
+  CC      libbb/update_passwd.o
+  CC      procps/pidof.o
+  AR      runit/lib.a
+  CC      procps/pmap.o
+  CC      libbb/utmp.o
+  CC      libbb/uuencode.o
+  CC      procps/powertop.o
+  CC      procps/ps.o
+  CC      libbb/verror_msg.o
+  CC      networking/whois.o
+  CC      libbb/vfork_daemon_rexec.o
+  CC      networking/zcip.o
+  CC      libbb/warn_ignoring_args.o
+  CC      procps/pstree.o
+  CC      procps/pwdx.o
+  CC      libbb/wfopen.o
+  AR      networking/lib.a
+  CC      libbb/wfopen_input.o
+  CC      libbb/write.o
+  CC      procps/smemcap.o
+  CC      procps/sysctl.o
+  CC      procps/top.o
+  CC      libbb/xatonum.o
+  CC      libbb/xconnect.o
+  CC      libbb/xfunc_die.o
+  CC      procps/uptime.o
+  CC      libbb/xfuncs.o
+  CC      procps/watch.o
+  CC      libbb/xfuncs_printf.o
+  CC      libbb/xgetcwd.o
+  AR      procps/lib.a
+  CC      libbb/xgethostbyname.o
+  LD      selinux/built-in.o
+  AR      selinux/lib.a
+  CC      libbb/xreadlink.o
+  CC      libbb/xrealloc_vector.o
+  LD      shell/built-in.o
+  CC      shell/ash.o
+  CC      libbb/xregcomp.o
+  LD      sysklogd/built-in.o
+  CC      sysklogd/klogd.o
+  CC      shell/ash_ptr_hack.o
+  CC      sysklogd/logread.o
+  AR      libbb/lib.a
+  CC      sysklogd/syslogd_and_logger.o
+  CC      shell/cttyhack.o
+  CC      shell/hush.o
+  LD      util-linux/built-in.o
+  CC      util-linux/acpid.o
+  AR      sysklogd/lib.a
+  LD      util-linux/volume_id/built-in.o
+  CC      util-linux/volume_id/bcache.o
+  CC      util-linux/blkdiscard.o
+  CC      util-linux/volume_id/btrfs.o
+  CC      util-linux/blkid.o
+  CC      util-linux/volume_id/cramfs.o
+  CC      util-linux/blockdev.o
+  CC      util-linux/volume_id/exfat.o
+  CC      util-linux/cal.o
+  CC      util-linux/volume_id/ext.o
+  CC      util-linux/chrt.o
+  CC      util-linux/volume_id/f2fs.o
+  CC      util-linux/volume_id/fat.o
+  CC      util-linux/dmesg.o
+  CC      util-linux/volume_id/get_devname.o
+  CC      util-linux/eject.o
+  CC      util-linux/volume_id/hfs.o
+  CC      util-linux/volume_id/iso9660.o
+  CC      util-linux/fallocate.o
+  CC      util-linux/fatattr.o
+  CC      util-linux/volume_id/jfs.o
+  CC      util-linux/fbset.o
+  CC      util-linux/volume_id/lfs.o
+  CC      util-linux/volume_id/linux_raid.o
+  CC      util-linux/volume_id/linux_swap.o
+  CC      util-linux/fdformat.o
+  CC      util-linux/fdisk.o
+  CC      util-linux/volume_id/luks.o
+  CC      util-linux/findfs.o
+  CC      util-linux/volume_id/minix.o
+  CC      util-linux/volume_id/nilfs.o
+  CC      util-linux/flock.o
+  CC      util-linux/volume_id/ntfs.o
+  CC      util-linux/volume_id/ocfs2.o
+  CC      util-linux/freeramdisk.o
+  CC      util-linux/volume_id/reiserfs.o
+  CC      util-linux/volume_id/romfs.o
+  CC      shell/match.o
+  CC      util-linux/volume_id/squashfs.o
+  CC      util-linux/fsck_minix.o
+  CC      util-linux/fsfreeze.o
+  CC      shell/math.o
+  CC      util-linux/volume_id/sysv.o
+  CC      util-linux/volume_id/ubifs.o
+  CC      shell/random.o
+  CC      util-linux/volume_id/udf.o
+  CC      util-linux/volume_id/util.o
+  CC      shell/shell_common.o
+  CC      util-linux/fstrim.o
+  CC      util-linux/volume_id/volume_id.o
+  CC      util-linux/volume_id/xfs.o
+  CC      util-linux/getopt.o
+  CC      util-linux/hexdump.o
+  AR      shell/lib.a
+  CC      util-linux/hexdump_xxd.o
+  AR      util-linux/volume_id/lib.a
+  CC      util-linux/hwclock.o
+  CC      util-linux/ionice.o
+  CC      util-linux/ipcrm.o
+  CC      util-linux/ipcs.o
+  CC      util-linux/last_fancy.o
+  CC      util-linux/losetup.o
+  CC      util-linux/lspci.o
+  CC      util-linux/lsusb.o
+  CC      util-linux/mdev.o
+  CC      util-linux/mesg.o
+  CC      util-linux/mkfs_ext2.o
+  CC      util-linux/mkfs_minix.o
+  CC      util-linux/mkfs_vfat.o
+  CC      util-linux/mkswap.o
+  CC      util-linux/more.o
+  CC      util-linux/mount.o
+  CC      util-linux/mountpoint.o
+  CC      util-linux/nsenter.o
+  CC      util-linux/pivot_root.o
+  CC      util-linux/rdate.o
+  CC      util-linux/rdev.o
+  CC      util-linux/readprofile.o
+  CC      util-linux/renice.o
+  CC      util-linux/rev.o
+  CC      util-linux/rtcwake.o
+  CC      util-linux/script.o
+  CC      util-linux/scriptreplay.o
+  CC      util-linux/setarch.o
+  CC      util-linux/setpriv.o
+  CC      util-linux/setsid.o
+  CC      util-linux/swaponoff.o
+  CC      util-linux/switch_root.o
+  CC      util-linux/taskset.o
+  CC      util-linux/uevent.o
+  CC      util-linux/umount.o
+  CC      util-linux/unshare.o
+  CC      util-linux/wall.o
+  AR      util-linux/lib.a
+  LINK    busybox_unstripped
+Static linking against glibc, can't use --gc-sections
+Trying libraries: crypt m resolv rt
+ Library crypt is not needed, excluding it
+ Library m is needed, can't exclude it (yet)
+ Library resolv is needed, can't exclude it (yet)
+ Library rt is not needed, excluding it
+ Library m is needed, can't exclude it (yet)
+ Library resolv is needed, can't exclude it (yet)
+Final link with: m resolv
+Packaging busybox...
+  ../busybox_rootfs//bin/arch -> busybox
+  ../busybox_rootfs//bin/ash -> busybox
+  ../busybox_rootfs//bin/base64 -> busybox
+  ../busybox_rootfs//bin/cat -> busybox
+  ../busybox_rootfs//bin/chattr -> busybox
+  ../busybox_rootfs//bin/chgrp -> busybox
+  ../busybox_rootfs//bin/chmod -> busybox
+  ../busybox_rootfs//bin/chown -> busybox
+  ../busybox_rootfs//bin/conspy -> busybox
+  ../busybox_rootfs//bin/cp -> busybox
+  ../busybox_rootfs//bin/cpio -> busybox
+  ../busybox_rootfs//bin/cttyhack -> busybox
+  ../busybox_rootfs//bin/date -> busybox
+  ../busybox_rootfs//bin/dd -> busybox
+  ../busybox_rootfs//bin/df -> busybox
+  ../busybox_rootfs//bin/dmesg -> busybox
+  ../busybox_rootfs//bin/dnsdomainname -> busybox
+  ../busybox_rootfs//bin/dumpkmap -> busybox
+  ../busybox_rootfs//bin/echo -> busybox
+  ../busybox_rootfs//bin/ed -> busybox
+  ../busybox_rootfs//bin/egrep -> busybox
+  ../busybox_rootfs//bin/false -> busybox
+  ../busybox_rootfs//bin/fatattr -> busybox
+  ../busybox_rootfs//bin/fdflush -> busybox
+  ../busybox_rootfs//bin/fgrep -> busybox
+  ../busybox_rootfs//bin/fsync -> busybox
+  ../busybox_rootfs//bin/getopt -> busybox
+  ../busybox_rootfs//bin/grep -> busybox
+  ../busybox_rootfs//bin/gunzip -> busybox
+  ../busybox_rootfs//bin/gzip -> busybox
+  ../busybox_rootfs//bin/hostname -> busybox
+  ../busybox_rootfs//bin/hush -> busybox
+  ../busybox_rootfs//bin/ionice -> busybox
+  ../busybox_rootfs//bin/iostat -> busybox
+  ../busybox_rootfs//bin/ipcalc -> busybox
+  ../busybox_rootfs//bin/kbd_mode -> busybox
+  ../busybox_rootfs//bin/kill -> busybox
+  ../busybox_rootfs//bin/link -> busybox
+  ../busybox_rootfs//bin/linux32 -> busybox
+  ../busybox_rootfs//bin/linux64 -> busybox
+  ../busybox_rootfs//bin/ln -> busybox
+  ../busybox_rootfs//bin/login -> busybox
+  ../busybox_rootfs//bin/ls -> busybox
+  ../busybox_rootfs//bin/lsattr -> busybox
+  ../busybox_rootfs//bin/lzop -> busybox
+  ../busybox_rootfs//bin/makemime -> busybox
+  ../busybox_rootfs//bin/mkdir -> busybox
+  ../busybox_rootfs//bin/mknod -> busybox
+  ../busybox_rootfs//bin/mktemp -> busybox
+  ../busybox_rootfs//bin/more -> busybox
+  ../busybox_rootfs//bin/mount -> busybox
+  ../busybox_rootfs//bin/mountpoint -> busybox
+  ../busybox_rootfs//bin/mpstat -> busybox
+  ../busybox_rootfs//bin/mt -> busybox
+  ../busybox_rootfs//bin/mv -> busybox
+  ../busybox_rootfs//bin/netstat -> busybox
+  ../busybox_rootfs//bin/nice -> busybox
+  ../busybox_rootfs//bin/nuke -> busybox
+  ../busybox_rootfs//bin/pidof -> busybox
+  ../busybox_rootfs//bin/ping -> busybox
+  ../busybox_rootfs//bin/ping6 -> busybox
+  ../busybox_rootfs//bin/pipe_progress -> busybox
+  ../busybox_rootfs//bin/printenv -> busybox
+  ../busybox_rootfs//bin/ps -> busybox
+  ../busybox_rootfs//bin/pwd -> busybox
+  ../busybox_rootfs//bin/reformime -> busybox
+  ../busybox_rootfs//bin/resume -> busybox
+  ../busybox_rootfs//bin/rev -> busybox
+  ../busybox_rootfs//bin/rm -> busybox
+  ../busybox_rootfs//bin/rmdir -> busybox
+  ../busybox_rootfs//bin/rpm -> busybox
+  ../busybox_rootfs//bin/run-parts -> busybox
+  ../busybox_rootfs//bin/scriptreplay -> busybox
+  ../busybox_rootfs//bin/sed -> busybox
+  ../busybox_rootfs//bin/setarch -> busybox
+  ../busybox_rootfs//bin/setpriv -> busybox
+  ../busybox_rootfs//bin/setserial -> busybox
+  ../busybox_rootfs//bin/sh -> busybox
+  ../busybox_rootfs//bin/sleep -> busybox
+  ../busybox_rootfs//bin/stat -> busybox
+  ../busybox_rootfs//bin/stty -> busybox
+  ../busybox_rootfs//bin/su -> busybox
+  ../busybox_rootfs//bin/sync -> busybox
+  ../busybox_rootfs//bin/tar -> busybox
+  ../busybox_rootfs//bin/touch -> busybox
+  ../busybox_rootfs//bin/true -> busybox
+  ../busybox_rootfs//bin/umount -> busybox
+  ../busybox_rootfs//bin/uname -> busybox
+  ../busybox_rootfs//bin/usleep -> busybox
+  ../busybox_rootfs//bin/vi -> busybox
+  ../busybox_rootfs//bin/watch -> busybox
+  ../busybox_rootfs//bin/zcat -> busybox
+  ../busybox_rootfs//linuxrc -> bin/busybox
+  ../busybox_rootfs//sbin/acpid -> ../bin/busybox
+  ../busybox_rootfs//sbin/adjtimex -> ../bin/busybox
+  ../busybox_rootfs//sbin/arp -> ../bin/busybox
+  ../busybox_rootfs//sbin/blkid -> ../bin/busybox
+  ../busybox_rootfs//sbin/blockdev -> ../bin/busybox
+  ../busybox_rootfs//sbin/bootchartd -> ../bin/busybox
+  ../busybox_rootfs//sbin/depmod -> ../bin/busybox
+  ../busybox_rootfs//sbin/devmem -> ../bin/busybox
+  ../busybox_rootfs//sbin/fbsplash -> ../bin/busybox
+  ../busybox_rootfs//sbin/fdisk -> ../bin/busybox
+  ../busybox_rootfs//sbin/findfs -> ../bin/busybox
+  ../busybox_rootfs//sbin/freeramdisk -> ../bin/busybox
+  ../busybox_rootfs//sbin/fsck -> ../bin/busybox
+  ../busybox_rootfs//sbin/fsck.minix -> ../bin/busybox
+  ../busybox_rootfs//sbin/fstrim -> ../bin/busybox
+  ../busybox_rootfs//sbin/getty -> ../bin/busybox
+  ../busybox_rootfs//sbin/halt -> ../bin/busybox
+  ../busybox_rootfs//sbin/hdparm -> ../bin/busybox
+  ../busybox_rootfs//sbin/hwclock -> ../bin/busybox
+  ../busybox_rootfs//sbin/ifconfig -> ../bin/busybox
+  ../busybox_rootfs//sbin/ifdown -> ../bin/busybox
+  ../busybox_rootfs//sbin/ifenslave -> ../bin/busybox
+  ../busybox_rootfs//sbin/ifup -> ../bin/busybox
+  ../busybox_rootfs//sbin/init -> ../bin/busybox
+  ../busybox_rootfs//sbin/insmod -> ../bin/busybox
+  ../busybox_rootfs//sbin/ip -> ../bin/busybox
+  ../busybox_rootfs//sbin/ipaddr -> ../bin/busybox
+  ../busybox_rootfs//sbin/iplink -> ../bin/busybox
+  ../busybox_rootfs//sbin/ipneigh -> ../bin/busybox
+  ../busybox_rootfs//sbin/iproute -> ../bin/busybox
+  ../busybox_rootfs//sbin/iprule -> ../bin/busybox
+  ../busybox_rootfs//sbin/iptunnel -> ../bin/busybox
+  ../busybox_rootfs//sbin/klogd -> ../bin/busybox
+  ../busybox_rootfs//sbin/loadkmap -> ../bin/busybox
+  ../busybox_rootfs//sbin/logread -> ../bin/busybox
+  ../busybox_rootfs//sbin/losetup -> ../bin/busybox
+  ../busybox_rootfs//sbin/lsmod -> ../bin/busybox
+  ../busybox_rootfs//sbin/makedevs -> ../bin/busybox
+  ../busybox_rootfs//sbin/mdev -> ../bin/busybox
+  ../busybox_rootfs//sbin/mkdosfs -> ../bin/busybox
+  ../busybox_rootfs//sbin/mke2fs -> ../bin/busybox
+  ../busybox_rootfs//sbin/mkfs.ext2 -> ../bin/busybox
+  ../busybox_rootfs//sbin/mkfs.minix -> ../bin/busybox
+  ../busybox_rootfs//sbin/mkfs.vfat -> ../bin/busybox
+  ../busybox_rootfs//sbin/mkswap -> ../bin/busybox
+  ../busybox_rootfs//sbin/modinfo -> ../bin/busybox
+  ../busybox_rootfs//sbin/modprobe -> ../bin/busybox
+  ../busybox_rootfs//sbin/nameif -> ../bin/busybox
+  ../busybox_rootfs//sbin/pivot_root -> ../bin/busybox
+  ../busybox_rootfs//sbin/poweroff -> ../bin/busybox
+  ../busybox_rootfs//sbin/raidautorun -> ../bin/busybox
+  ../busybox_rootfs//sbin/reboot -> ../bin/busybox
+  ../busybox_rootfs//sbin/rmmod -> ../bin/busybox
+  ../busybox_rootfs//sbin/route -> ../bin/busybox
+  ../busybox_rootfs//sbin/run-init -> ../bin/busybox
+  ../busybox_rootfs//sbin/runlevel -> ../bin/busybox
+  ../busybox_rootfs//sbin/setconsole -> ../bin/busybox
+  ../busybox_rootfs//sbin/slattach -> ../bin/busybox
+  ../busybox_rootfs//sbin/start-stop-daemon -> ../bin/busybox
+  ../busybox_rootfs//sbin/sulogin -> ../bin/busybox
+  ../busybox_rootfs//sbin/swapoff -> ../bin/busybox
+  ../busybox_rootfs//sbin/swapon -> ../bin/busybox
+  ../busybox_rootfs//sbin/switch_root -> ../bin/busybox
+  ../busybox_rootfs//sbin/sysctl -> ../bin/busybox
+  ../busybox_rootfs//sbin/syslogd -> ../bin/busybox
+  ../busybox_rootfs//sbin/tc -> ../bin/busybox
+  ../busybox_rootfs//sbin/tunctl -> ../bin/busybox
+  ../busybox_rootfs//sbin/udhcpc -> ../bin/busybox
+  ../busybox_rootfs//sbin/uevent -> ../bin/busybox
+  ../busybox_rootfs//sbin/vconfig -> ../bin/busybox
+  ../busybox_rootfs//sbin/watchdog -> ../bin/busybox
+  ../busybox_rootfs//sbin/zcip -> ../bin/busybox
+  ../busybox_rootfs//usr/bin/[ -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/[[ -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/awk -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/basename -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/bc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/beep -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/blkdiscard -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/bunzip2 -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/bzcat -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/bzip2 -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/cal -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/chpst -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/chrt -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/chvt -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/cksum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/clear -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/cmp -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/comm -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/crontab -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/cryptpw -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/cut -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/deallocvt -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/diff -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dirname -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dos2unix -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dpkg -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dpkg-deb -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/du -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/dumpleases -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/eject -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/env -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/envdir -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/envuidgid -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/expand -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/expr -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/factor -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/fallocate -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/fgconsole -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/find -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/flock -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/fold -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/free -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ftpget -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ftpput -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/fuser -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/groups -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/hd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/head -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/hexdump -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/hexedit -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/hostid -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/id -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/install -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ipcrm -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ipcs -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/killall -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/last -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/less -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/logger -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/logname -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lpq -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lpr -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lsof -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lspci -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lsscsi -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lsusb -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lzcat -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/lzma -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/man -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/md5sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/mesg -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/microcom -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/mkfifo -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/mkpasswd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nl -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nmeter -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nohup -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nproc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nsenter -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/nslookup -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/od -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/openvt -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/passwd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/paste -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/patch -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pgrep -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pkill -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pmap -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/printf -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pscan -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pstree -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/pwdx -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/readlink -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/realpath -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/renice -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/reset -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/resize -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/rpm2cpio -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/runsv -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/runsvdir -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/rx -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/script -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/seq -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/setfattr -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/setkeycodes -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/setsid -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/setuidgid -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sha1sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sha256sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sha3sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sha512sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/showkey -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/shred -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/shuf -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/smemcap -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/softlimit -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sort -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/split -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ssl_client -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/strings -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sum -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/sv -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/svc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/svok -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tac -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tail -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/taskset -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tcpsvd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tee -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/telnet -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/test -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tftp -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/time -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/timeout -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/top -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tr -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/traceroute -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/traceroute6 -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/truncate -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ts -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/tty -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/ttysize -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/udhcpc6 -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/udpsvd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unexpand -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/uniq -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unix2dos -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unlink -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unlzma -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unshare -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unxz -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/unzip -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/uptime -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/users -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/uudecode -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/uuencode -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/vlock -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/volname -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/w -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/wall -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/wc -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/wget -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/which -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/who -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/whoami -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/whois -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/xargs -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/xxd -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/xz -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/xzcat -> ../../bin/busybox
+  ../busybox_rootfs//usr/bin/yes -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/add-shell -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/addgroup -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/adduser -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/arping -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/brctl -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/chat -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/chpasswd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/chroot -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/crond -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/delgroup -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/deluser -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/dhcprelay -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/dnsd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ether-wake -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/fakeidentd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/fbset -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/fdformat -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/fsfreeze -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ftpd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/httpd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/i2cdetect -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/i2cdump -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/i2cget -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/i2cset -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/i2ctransfer -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ifplugd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/inetd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/killall5 -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/loadfont -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/lpd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/mim -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/nanddump -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/nandwrite -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/nbd-client -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/nologin -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ntpd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/partprobe -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/popmaildir -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/powertop -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/rdate -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/rdev -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/readahead -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/readprofile -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/remove-shell -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/rtcwake -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/sendmail -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/setfont -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/setlogcons -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/svlogd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/telnetd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/tftpd -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubiattach -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubidetach -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubimkvol -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubirename -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubirmvol -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubirsvol -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/ubiupdatevol -> ../../bin/busybox
+  ../busybox_rootfs//usr/sbin/udhcpd -> ../../bin/busybox
+
+
+--------------------------------------------------
+You will probably need to make your busybox binary
+setuid root to ensure all configured applets will
+work properly.
+--------------------------------------------------
+
+Copying busybox to the initramfs directory...
+/tmp/tmp.JoFxhJO7Ni/linux-5.4.81
+/tmp/tmp.JoFxhJO7Ni/busybox_rootfs
+/tmp/tmp.JoFxhJO7Ni/linux-5.4.81
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/sbin
+install dropbear /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/sbin
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man8
+install -m 644 ./dropbear.8 /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man8/dropbear.8
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install dbclient /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1
+if test -e ./dbclient.1; then install -m 644 ./dbclient.1 /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1/dbclient.1; fi
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install dropbearkey /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1
+if test -e ./dropbearkey.1; then install -m 644 ./dropbearkey.1 /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1/dropbearkey.1; fi
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install dropbearconvert /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/bin
+install -d /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1
+if test -e ./dropbearconvert.1; then install -m 644 ./dropbearconvert.1 /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/initramfs//usr/local/share/man/man1/dropbearconvert.1; fi
+Reached here!
+/tmp/tmp.JoFxhJO7Ni/linux-5.4.81
+Creating device nodes...
+Creating init script...
+Packing initramfs.cpio...
+Building kernel...
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --syncconfig Kconfig
+  SYSTBL  arch/x86/include/generated/asm/syscalls_32.h
+  SYSHDR  arch/x86/include/generated/asm/unistd_32_ia32.h
+  SYSHDR  arch/x86/include/generated/asm/unistd_64_x32.h
+  SYSTBL  arch/x86/include/generated/asm/syscalls_64.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_32.h
+  WRAP    arch/x86/include/generated/uapi/asm/bpf_perf_event.h
+  WRAP    arch/x86/include/generated/uapi/asm/errno.h
+  WRAP    arch/x86/include/generated/uapi/asm/fcntl.h
+  WRAP    arch/x86/include/generated/uapi/asm/ioctl.h
+  WRAP    arch/x86/include/generated/uapi/asm/ioctls.h
+  WRAP    arch/x86/include/generated/uapi/asm/ipcbuf.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_64.h
+  WRAP    arch/x86/include/generated/uapi/asm/param.h
+  WRAP    arch/x86/include/generated/uapi/asm/poll.h
+  WRAP    arch/x86/include/generated/uapi/asm/resource.h
+  WRAP    arch/x86/include/generated/uapi/asm/socket.h
+  WRAP    arch/x86/include/generated/uapi/asm/sockios.h
+  WRAP    arch/x86/include/generated/uapi/asm/termbits.h
+  WRAP    arch/x86/include/generated/uapi/asm/termios.h
+  WRAP    arch/x86/include/generated/uapi/asm/types.h
+  SYSHDR  arch/x86/include/generated/uapi/asm/unistd_x32.h
+  HOSTCC  arch/x86/tools/relocs_32.o
+  HOSTCC  arch/x86/tools/relocs_64.o
+  HOSTCC  arch/x86/tools/relocs_common.o
+  UPD     include/config/kernel.release
+  WRAP    arch/x86/include/generated/asm/dma-contiguous.h
+  WRAP    arch/x86/include/generated/asm/early_ioremap.h
+  WRAP    arch/x86/include/generated/asm/export.h
+  WRAP    arch/x86/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/x86/include/generated/asm/mm-arch-hooks.h
+  WRAP    arch/x86/include/generated/asm/mmiowb.h
+  HOSTLD  arch/x86/tools/relocs
+  UPD     include/generated/uapi/linux/version.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/genksyms/genksyms.o
+  YACC    scripts/genksyms/parse.tab.[ch]
+  LEX     scripts/genksyms/lex.lex.c
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  HOSTCC  scripts/bin2c
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/asn1_compiler
+  HOSTCC  scripts/sign-file
+  HOSTCC  scripts/extract-cert
+  HOSTLD  scripts/genksyms/genksyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  CC      scripts/mod/devicetable-offsets.s
+  UPD     scripts/mod/devicetable-offsets.h
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  CC      kernel/bounds.s
+  CALL    scripts/atomic/check-atomics.sh
+  UPD     include/generated/timeconst.h
+  UPD     include/generated/bounds.h
+  CC      arch/x86/kernel/asm-offsets.s
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  CC      init/main.o
+  CC      init/do_mounts.o
+  HOSTCC  usr/gen_init_cpio
+  UPD     include/generated/compile.h
+  CC      init/do_mounts_initrd.o
+  GEN     usr/initramfs_data.cpio.gz
+  CC      init/initramfs.o
+  CC      init/calibrate.o
+  AS      usr/initramfs_data.o
+  AR      usr/built-in.a
+  CC      init/init_task.o
+  AS      arch/x86/crypto/crct10dif-pcl-asm_64.o
+  CC      arch/x86/crypto/crct10dif-pclmul_glue.o
+  CC      arch/x86/events/amd/core.o
+  CC      arch/x86/entry/vdso/vma.o
+  AR      arch/x86/crypto/built-in.a
+  CC      arch/x86/events/amd/uncore.o
+  CC      init/version.o
+  CC      arch/x86/entry/vdso/vdso32-setup.o
+  LDS     arch/x86/entry/vdso/vdso.lds
+  AS      arch/x86/entry/vdso/vdso-note.o
+  AR      init/built-in.a
+  CC      arch/x86/ia32/sys_ia32.o
+  CC      arch/x86/entry/vsyscall/vsyscall_64.o
+  CC      arch/x86/entry/vdso/vclock_gettime.o
+  CC      arch/x86/events/amd/ibs.o
+  CC      arch/x86/entry/vdso/vgetcpu.o
+  HOSTCC  arch/x86/entry/vdso/vdso2c
+  AS      arch/x86/entry/vsyscall/vsyscall_emu_64.o
+  CC      arch/x86/ia32/ia32_signal.o
+  AR      arch/x86/entry/vsyscall/built-in.a
+  CC      arch/x86/ia32/audit.o
+  AS      arch/x86/entry/entry_64.o
+  LDS     arch/x86/entry/vdso/vdso32/vdso32.lds
+  CC      arch/x86/entry/vdso/vdso32/vclock_gettime.o
+  AS      arch/x86/entry/thunk_64.o
+  AS      arch/x86/entry/vdso/vdso32/note.o
+  AS      arch/x86/entry/vdso/vdso32/system_call.o
+  AR      arch/x86/events/amd/built-in.a
+  CC      arch/x86/events/intel/core.o
+  CC      arch/x86/entry/syscall_64.o
+  AR      arch/x86/ia32/built-in.a
+  CC      arch/x86/events/intel/bts.o
+  AS      arch/x86/entry/vdso/vdso32/sigreturn.o
+  VDSO    arch/x86/entry/vdso/vdso64.so.dbg
+  VDSO    arch/x86/entry/vdso/vdso32.so.dbg
+  OBJCOPY arch/x86/entry/vdso/vdso64.so
+  OBJCOPY arch/x86/entry/vdso/vdso32.so
+  VDSO2C  arch/x86/entry/vdso/vdso-image-64.c
+  VDSO2C  arch/x86/entry/vdso/vdso-image-32.c
+  CC      arch/x86/entry/vdso/vdso-image-64.o
+  CC      arch/x86/entry/vdso/vdso-image-32.o
+  CC      arch/x86/entry/common.o
+  AR      arch/x86/entry/vdso/built-in.a
+  CC      arch/x86/kernel/acpi/boot.o
+  CC      arch/x86/kernel/apic/apic.o
+  AS      arch/x86/entry/entry_64_compat.o
+  CC      arch/x86/entry/syscall_32.o
+  AR      arch/x86/entry/built-in.a
+  CC      arch/x86/kernel/apic/apic_common.o
+  CC      arch/x86/kernel/acpi/sleep.o
+  CC      arch/x86/events/intel/ds.o
+  CC      arch/x86/events/intel/knc.o
+  CC      arch/x86/kernel/apic/apic_noop.o
+  AS      arch/x86/kernel/acpi/wakeup_64.o
+  CC      arch/x86/kernel/acpi/cppc_msr.o
+  CC      arch/x86/kernel/apic/ipi.o
+  CC      arch/x86/kernel/apic/vector.o
+  CC      arch/x86/kernel/apic/hw_nmi.o
+  CC      arch/x86/kernel/acpi/cstate.o
+  CC      arch/x86/events/intel/lbr.o
+  CC      arch/x86/events/intel/p4.o
+  AR      arch/x86/kernel/acpi/built-in.a
+  CC      arch/x86/kernel/apic/io_apic.o
+  CC      arch/x86/events/intel/p6.o
+  CC      arch/x86/kernel/apic/x2apic_phys.o
+  CC      kernel/bpf/core.o
+  CC      kernel/bpf/syscall.o
+  CC      arch/x86/events/intel/pt.o
+  CC      arch/x86/kernel/apic/x2apic_cluster.o
+  CC      arch/x86/kernel/apic/apic_flat_64.o
+  AR      arch/x86/events/intel/built-in.a
+  CC      arch/x86/events/core.o
+  CC      arch/x86/kernel/apic/probe_64.o
+  CC      arch/x86/events/probe.o
+  AR      arch/x86/kernel/apic/built-in.a
+  CC      arch/x86/kernel/cpu/mtrr/mtrr.o
+  CC      arch/x86/kernel/cpu/cacheinfo.o
+  CC      kernel/bpf/verifier.o
+  CC      arch/x86/kernel/cpu/scattered.o
+  CC      arch/x86/kernel/cpu/mtrr/if.o
+  CC      arch/x86/kernel/cpu/mtrr/generic.o
+  CC      arch/x86/events/msr.o
+  CC      kernel/bpf/inode.o
+  AR      arch/x86/events/built-in.a
+  CC      kernel/cgroup/cgroup.o
+  CC      arch/x86/kernel/cpu/mtrr/cleanup.o
+  AR      arch/x86/kernel/cpu/mtrr/built-in.a
+  CC      arch/x86/kernel/cpu/topology.o
+  CC      arch/x86/kernel/cpu/common.o
+  CC      kernel/bpf/helpers.o
+  CC      arch/x86/kernel/cpu/rdrand.o
+  CC      arch/x86/kernel/cpu/match.o
+  CC      arch/x86/mm/init.o
+  CC      arch/x86/kernel/cpu/bugs.o
+  CC      kernel/bpf/tnum.o
+  CC      kernel/bpf/hashtab.o
+  CC      kernel/cgroup/rstat.o
+  CC      arch/x86/mm/init_64.o
+  CC      arch/x86/kernel/cpu/aperfmperf.o
+  CC      kernel/cgroup/namespace.o
+  CC      arch/x86/kernel/cpu/cpuid-deps.o
+  CC      kernel/bpf/arraymap.o
+  CC      arch/x86/kernel/cpu/umwait.o
+  CC      kernel/cgroup/cgroup-v1.o
+  CC      arch/x86/mm/fault.o
+  CC      arch/x86/kernel/cpu/proc.o
+  MKCAP   arch/x86/kernel/cpu/capflags.c
+  CC      kernel/bpf/percpu_freelist.o
+  CC      kernel/cgroup/freezer.o
+  CC      arch/x86/mm/ioremap.o
+  CC      kernel/bpf/bpf_lru_list.o
+  CC      kernel/cgroup/legacy_freezer.o
+  CC      kernel/bpf/lpm_trie.o
+  CC      kernel/cgroup/pids.o
+  CC      arch/x86/mm/extable.o
+  CC      kernel/cgroup/cpuset.o
+  CC      kernel/bpf/map_in_map.o
+  CC      kernel/bpf/local_storage.o
+  CC      arch/x86/mm/pageattr.o
+  CC      kernel/bpf/queue_stack_maps.o
+  CC      kernel/bpf/disasm.o
+  AR      kernel/cgroup/built-in.a
+  CC      arch/x86/kernel/cpu/powerflags.o
+  CC      arch/x86/mm/mmap.o
+  CC      kernel/bpf/btf.o
+  CC      kernel/dma/mapping.o
+  CC      arch/x86/mm/pat.o
+  CC      kernel/dma/direct.o
+  CC      arch/x86/mm/pgtable.o
+  CC      kernel/bpf/devmap.o
+  CC      arch/x86/kernel/cpu/intel.o
+  CC      kernel/dma/dummy.o
+  CC      arch/x86/kernel/cpu/intel_pconfig.o
+  CC      kernel/dma/swiotlb.o
+  CC      arch/x86/kernel/cpu/tsx.o
+  CC      kernel/bpf/cpumap.o
+  CC      arch/x86/mm/physaddr.o
+  CC      arch/x86/kernel/cpu/intel_epb.o
+  CC      arch/x86/kernel/cpu/amd.o
+  CC      arch/x86/mm/setup_nx.o
+  AR      kernel/dma/built-in.a
+  CC      arch/x86/kernel/cpu/hygon.o
+  CC      arch/x86/mm/tlb.o
+  CC      kernel/bpf/offload.o
+  CC      arch/x86/mm/cpu_entry_area.o
+  CC      arch/x86/kernel/cpu/centaur.o
+  CC      arch/x86/kernel/cpu/zhaoxin.o
+  CC      arch/x86/kernel/cpu/perfctr-watchdog.o
+  CC      kernel/bpf/stackmap.o
+  CC      arch/x86/mm/pat_rbtree.o
+  CC      arch/x86/mm/hugetlbpage.o
+  CC      arch/x86/kernel/cpu/vmware.o
+  CC      arch/x86/kernel/cpu/hypervisor.o
+  CC      kernel/events/core.o
+  CC      arch/x86/kernel/cpu/mshyperv.o
+  CC      arch/x86/mm/numa.o
+  CC      kernel/bpf/cgroup.o
+  CC      arch/x86/kernel/cpu/capflags.o
+  AR      arch/x86/kernel/cpu/built-in.a
+  CC      arch/x86/kernel/fpu/init.o
+  CC      arch/x86/mm/numa_64.o
+  CC      arch/x86/mm/pkeys.o
+  CC      arch/x86/kernel/fpu/bugs.o
+  CC      arch/x86/mm/pti.o
+  CC      arch/x86/kernel/fpu/core.o
+  CC      kernel/bpf/reuseport_array.o
+  CC      arch/x86/mm/mem_encrypt.o
+  AR      kernel/bpf/built-in.a
+  CC      arch/x86/kernel/kprobes/core.o
+  CC      arch/x86/kernel/fpu/regset.o
+  CC      arch/x86/mm/mem_encrypt_identity.o
+  CC      arch/x86/kernel/kprobes/opt.o
+  CC      arch/x86/kernel/fpu/signal.o
+  AS      arch/x86/mm/mem_encrypt_boot.o
+  AR      arch/x86/mm/built-in.a
+  CC      arch/x86/kernel/process_64.o
+  AR      arch/x86/kernel/kprobes/built-in.a
+  CC      arch/x86/net/bpf_jit_comp.o
+  CC      arch/x86/kernel/fpu/xstate.o
+  CC      kernel/events/ring_buffer.o
+  CC      arch/x86/kernel/signal.o
+  AR      arch/x86/kernel/fpu/built-in.a
+  CC      arch/x86/kernel/signal_compat.o
+  AR      arch/x86/net/built-in.a
+  CC      arch/x86/kernel/traps.o
+  AR      arch/x86/platform/atom/built-in.a
+  AR      arch/x86/platform/ce4100/built-in.a
+  AR      arch/x86/platform/efi/built-in.a
+  CC      kernel/events/callchain.o
+  AR      arch/x86/platform/geode/built-in.a
+  AR      arch/x86/platform/goldfish/built-in.a
+  AR      arch/x86/platform/intel/built-in.a
+  AR      arch/x86/platform/intel-mid/built-in.a
+  AR      arch/x86/platform/intel-quark/built-in.a
+  AR      arch/x86/platform/iris/built-in.a
+  AR      arch/x86/platform/olpc/built-in.a
+  CC      kernel/irq/irqdesc.o
+  AR      arch/x86/platform/scx200/built-in.a
+  AR      arch/x86/platform/sfi/built-in.a
+  CC      arch/x86/kernel/idt.o
+  AR      arch/x86/platform/ts5500/built-in.a
+  AR      arch/x86/platform/uv/built-in.a
+  AR      arch/x86/platform/built-in.a
+  CC      kernel/irq/handle.o
+  CC      kernel/events/hw_breakpoint.o
+  CC      kernel/irq/manage.o
+  CC      arch/x86/kernel/irq.o
+  CC      arch/x86/kernel/irq_64.o
+  AR      kernel/events/built-in.a
+  CC      arch/x86/kernel/dumpstack_64.o
+  CC      arch/x86/kernel/time.o
+  CC      kernel/irq/spurious.o
+  CC      kernel/irq/resend.o
+  AR      kernel/livepatch/built-in.a
+  CC      arch/x86/kernel/ioport.o
+  CC      arch/x86/kernel/dumpstack.o
+  CC      arch/x86/kernel/nmi.o
+  CC      kernel/irq/chip.o
+  CC      kernel/irq/dummychip.o
+  CC      arch/x86/purgatory/purgatory.o
+  AS      arch/x86/purgatory/stack.o
+  AS      arch/x86/purgatory/setup-x86_64.o
+  CC      arch/x86/purgatory/sha256.o
+  CC      arch/x86/kernel/ldt.o
+  CC      kernel/irq/devres.o
+  CC      arch/x86/kernel/setup.o
+  AS      arch/x86/purgatory/entry64.o
+  CC      arch/x86/purgatory/string.o
+  CC      kernel/irq/autoprobe.o
+  LD      arch/x86/purgatory/purgatory.ro
+  BIN2C   arch/x86/purgatory/kexec-purgatory.c
+  CC      arch/x86/purgatory/kexec-purgatory.o
+  CC      kernel/locking/mutex.o
+  AR      arch/x86/purgatory/built-in.a
+  CC      kernel/power/qos.o
+  CC      kernel/irq/irqdomain.o
+  CC      arch/x86/kernel/x86_init.o
+  CC      kernel/locking/semaphore.o
+  CC      kernel/power/main.o
+  CC      arch/x86/kernel/i8259.o
+  CC      kernel/locking/rwsem.o
+  CC      kernel/irq/proc.o
+  CC      arch/x86/kernel/irqinit.o
+  CC      kernel/power/console.o
+  CC      kernel/irq/migration.o
+  CC      kernel/locking/percpu-rwsem.o
+  CC      kernel/locking/spinlock.o
+  CC      kernel/irq/cpuhotplug.o
+  CC      arch/x86/kernel/jump_label.o
+  CC      kernel/power/process.o
+  CC      kernel/locking/osq_lock.o
+  CC      kernel/irq/pm.o
+  CC      arch/x86/kernel/irq_work.o
+  CC      kernel/locking/qspinlock.o
+  CC      arch/x86/kernel/probe_roms.o
+  CC      kernel/power/hibernate.o
+  CC      kernel/irq/affinity.o
+  CC      kernel/locking/rtmutex.o
+  CC      arch/x86/kernel/sys_x86_64.o
+  CC      kernel/irq/matrix.o
+  CC      kernel/power/snapshot.o
+  CC      kernel/locking/qrwlock.o
+  CC      arch/x86/kernel/espfix_64.o
+  AR      kernel/irq/built-in.a
+  CC      arch/x86/kernel/ksysfs.o
+  AR      kernel/locking/built-in.a
+  CC      kernel/power/swap.o
+  CC      kernel/power/user.o
+  CC      arch/x86/kernel/bootflag.o
+  CC      arch/x86/kernel/e820.o
+  CC      arch/x86/kernel/pci-dma.o
+  CC      arch/x86/realmode/init.o
+  CC      kernel/power/poweroff.o
+  AR      kernel/power/built-in.a
+  CC      kernel/printk/printk.o
+  AS      arch/x86/realmode/rm/header.o
+  AS      arch/x86/realmode/rm/trampoline_64.o
+  AS      arch/x86/realmode/rm/stack.o
+  AS      arch/x86/realmode/rm/reboot.o
+  AS      arch/x86/realmode/rm/wakeup_asm.o
+  CC      arch/x86/realmode/rm/wakemain.o
+  CC      arch/x86/realmode/rm/video-mode.o
+  CC      arch/x86/kernel/quirks.o
+  AS      arch/x86/realmode/rm/copy.o
+  AS      arch/x86/realmode/rm/bioscall.o
+  CC      arch/x86/realmode/rm/regs.o
+  CC      arch/x86/realmode/rm/video-vga.o
+  CC      kernel/rcu/update.o
+  CC      arch/x86/realmode/rm/video-vesa.o
+  CC      arch/x86/realmode/rm/video-bios.o
+  PASYMS  arch/x86/realmode/rm/pasyms.h
+  LDS     arch/x86/realmode/rm/realmode.lds
+  LD      arch/x86/realmode/rm/realmode.elf
+  RELOCS  arch/x86/realmode/rm/realmode.relocs
+  OBJCOPY arch/x86/realmode/rm/realmode.bin
+  AS      arch/x86/realmode/rmpiggy.o
+  AR      arch/x86/realmode/built-in.a
+  CC      arch/x86/kernel/topology.o
+  CC      kernel/rcu/sync.o
+  CC      kernel/printk/printk_safe.o
+  CC      kernel/rcu/srcutree.o
+  CC      arch/x86/kernel/kdebugfs.o
+  CC      arch/x86/kernel/alternative.o
+  AR      kernel/printk/built-in.a
+  CC      arch/x86/kernel/i8253.o
+  CC      kernel/sched/core.o
+  CC      kernel/rcu/tree.o
+  CC      kernel/sched/loadavg.o
+  CC      arch/x86/kernel/hw_breakpoint.o
+  CC      kernel/rcu/rcu_segcblist.o
+  CC      arch/x86/kernel/tsc.o
+  CC      arch/x86/kernel/tsc_msr.o
+  CC      arch/x86/kernel/io_delay.o
+  CC      kernel/sched/clock.o
+  AR      kernel/rcu/built-in.a
+  CC      kernel/sched/cputime.o
+  CC      arch/x86/kernel/rtc.o
+  CC      kernel/time/time.o
+  CC      arch/x86/kernel/pci-iommu_table.o
+  CC      arch/x86/kernel/resource.o
+  CC      kernel/sched/idle.o
+  CC      kernel/fork.o
+  AS      arch/x86/kernel/irqflags.o
+  CC      arch/x86/kernel/process.o
+  CC      kernel/time/timer.o
+  CC      kernel/sched/fair.o
+  CC      arch/x86/kernel/ptrace.o
+  CC      kernel/time/hrtimer.o
+  CC      arch/x86/kernel/tls.o
+  CC      kernel/sched/rt.o
+  CC      arch/x86/kernel/step.o
+  CC      kernel/time/timekeeping.o
+  CC      arch/x86/kernel/i8237.o
+  CC      arch/x86/kernel/stacktrace.o
+  CC      arch/x86/kernel/reboot.o
+  CC      kernel/time/ntp.o
+  CC      kernel/sched/deadline.o
+  CC      kernel/time/clocksource.o
+  CC      arch/x86/kernel/msr.o
+  CC      kernel/time/jiffies.o
+  CC      arch/x86/kernel/cpuid.o
+  CC      kernel/time/timer_list.o
+  CC      arch/x86/kernel/smp.o
+  CC      kernel/time/timeconv.o
+  CC      kernel/sched/wait.o
+  CC      certs/system_keyring.o
+  CC      kernel/time/timecounter.o
+  CC      arch/x86/kernel/smpboot.o
+  CC      kernel/time/alarmtimer.o
+  EXTRACT_CERTS   
+Generating X.509 key generation config
+  CC      certs/blacklist.o
+  CC      kernel/time/posix-timers.o
+  CC      certs/blacklist_nohashes.o
+  CC      kernel/sched/wait_bit.o
+###
+### Now generating an X.509 key pair to be used for signing modules.
+###
+### If this takes a long time, you might wish to run rngd in the
+### background to keep the supply of entropy topped up.  It
+### needs to be run as root, and uses a hardware random
+### number generator if one is available.
+###
+Generating a RSA private key
+...........................  CC      arch/x86/kernel/tsc_sync.o
+.............................................................  CC      arch/x86/kernel/setup_percpu.o
+............++++
+.............................  CC      kernel/time/posix-cpu-timers.o
+......................++++
+writing new private key to 'certs/signing_key.pem'
+-----
+###
+### Key pair generated.
+###
+  EXTRACT_CERTS   certs/signing_key.pem
+  AS      certs/system_certificates.o
+  AR      certs/built-in.a
+  CC      kernel/sched/swait.o
+  CC      arch/x86/kernel/mpparse.o
+  CC      kernel/time/posix-clock.o
+  CC      kernel/sched/completion.o
+  CC      arch/x86/kernel/trace_clock.o
+  CC      arch/x86/kernel/machine_kexec_64.o
+  CC      kernel/time/itimer.o
+  AS      arch/x86/kernel/relocate_kernel_64.o
+  CC      kernel/sched/cpupri.o
+  CC      kernel/sched/cpudeadline.o
+  CC      kernel/time/clockevents.o
+  CC      arch/x86/kernel/crash.o
+  CC      arch/x86/kernel/kexec-bzimage64.o
+  CC      kernel/time/tick-common.o
+  CC      kernel/sched/topology.o
+  CC      arch/x86/kernel/module.o
+  CC      kernel/sched/stop_task.o
+  CC      arch/x86/kernel/doublefault.o
+  CC      kernel/time/tick-broadcast.o
+  CC      kernel/time/tick-broadcast-hrtimer.o
+  CC      arch/x86/kernel/early_printk.o
+  CC      kernel/time/tick-oneshot.o
+  CC      kernel/sched/pelt.o
+  CC      kernel/sched/autogroup.o
+  CC      kernel/time/tick-sched.o
+  CC      arch/x86/kernel/hpet.o
+  CC      kernel/time/vsyscall.o
+  CC      arch/x86/kernel/kvm.o
+  CC      kernel/sched/cpuacct.o
+  CC      kernel/time/timekeeping_debug.o
+  CC      mm/filemap.o
+  AR      kernel/time/built-in.a
+  CC      mm/mempool.o
+  CC      kernel/sched/cpufreq.o
+  CC      arch/x86/kernel/kvmclock.o
+  CC      kernel/exec_domain.o
+  CC      arch/x86/kernel/paravirt.o
+  CC      kernel/sched/membarrier.o
+  CC      kernel/sched/isolation.o
+  CC      mm/oom_kill.o
+  CC      mm/fadvise.o
+  CC      arch/x86/kernel/paravirt_patch.o
+  CC      arch/x86/kernel/paravirt-spinlocks.o
+  CC      arch/x86/kernel/pvclock.o
+  AR      kernel/sched/built-in.a
+  CC      kernel/panic.o
+  CC      fs/crypto/crypto.o
+  CC      arch/x86/kernel/pcspeaker.o
+  CC      mm/maccess.o
+  CC      kernel/cpu.o
+  CC      arch/x86/kernel/check.o
+  CC      fs/crypto/fname.o
+  CC      mm/page-writeback.o
+  CC      arch/x86/kernel/pci-swiotlb.o
+  CC      arch/x86/kernel/sysfb.o
+  CC      fs/crypto/hkdf.o
+  CC      arch/x86/kernel/perf_regs.o
+  CC      kernel/exit.o
+  CC      fs/crypto/hooks.o
+  CC      arch/x86/kernel/itmt.o
+  CC      mm/readahead.o
+  CC      fs/crypto/keyring.o
+  CC      arch/x86/kernel/umip.o
+  CC      arch/x86/kernel/unwind_frame.o
+  CC      fs/crypto/keysetup.o
+  CC      kernel/softirq.o
+  CC      mm/swap.o
+  CC      arch/x86/kernel/audit_64.o
+  CC      fs/crypto/keysetup_v1.o
+  CC      arch/x86/kernel/vsmp_64.o
+  CC      kernel/resource.o
+  AS      arch/x86/kernel/head_64.o
+  CC      fs/crypto/policy.o
+  CC      arch/x86/kernel/head64.o
+  CC      mm/truncate.o
+  CC      arch/x86/kernel/ebda.o
+  CC      fs/crypto/bio.o
+  CC      kernel/sysctl.o
+  CC      arch/x86/kernel/platform-quirks.o
+  LDS     arch/x86/kernel/vmlinux.lds
+  AR      arch/x86/kernel/built-in.a
+  AR      arch/x86/built-in.a
+  CC      kernel/sysctl_binary.o
+  CC      mm/vmscan.o
+  AR      fs/crypto/built-in.a
+  CC      fs/debugfs/inode.o
+  CC      fs/debugfs/file.o
+  CC      kernel/capability.o
+  AR      fs/debugfs/built-in.a
+  CC      fs/devpts/inode.o
+  CC      fs/exportfs/expfs.o
+  CC      kernel/ptrace.o
+  AR      fs/devpts/built-in.a
+  CC      kernel/user.o
+  AR      fs/exportfs/built-in.a
+  CC      fs/ext4/balloc.o
+  CC      fs/ext4/bitmap.o
+  CC      mm/shmem.o
+  CC      mm/util.o
+  CC      kernel/signal.o
+  CC      fs/ext4/block_validity.o
+  CC      fs/ext4/dir.o
+  CC      fs/ext4/ext4_jbd2.o
+  CC      fs/hugetlbfs/inode.o
+  CC      fs/ext4/extents.o
+  CC      mm/mmzone.o
+  CC      kernel/sys.o
+  AR      fs/hugetlbfs/built-in.a
+  CC      mm/vmstat.o
+  CC      kernel/umh.o
+  CC      mm/backing-dev.o
+  CC      kernel/workqueue.o
+  CC      fs/ext4/extents_status.o
+  CC      mm/mm_init.o
+  CC      fs/ext4/file.o
+  CC      fs/iomap/apply.o
+  CC      mm/mmu_context.o
+  CC      fs/ext4/fsmap.o
+  CC      fs/iomap/buffered-io.o
+  CC      mm/percpu.o
+  CC      kernel/pid.o
+  CC      fs/ext4/fsync.o
+  CC      fs/iomap/direct-io.o
+  CC      fs/ext4/hash.o
+  CC      kernel/task_work.o
+  CC      mm/slab_common.o
+  CC      kernel/extable.o
+  CC      fs/ext4/ialloc.o
+  CC      fs/iomap/fiemap.o
+  CC      kernel/params.o
+  CC      fs/iomap/seek.o
+  CC      mm/compaction.o
+  CC      fs/ext4/indirect.o
+  CC      kernel/kthread.o
+  CC      fs/iomap/swapfile.o
+  CC      fs/ext4/inline.o
+  AR      fs/iomap/built-in.a
+  CC      mm/vmacache.o
+  CC      kernel/sys_ni.o
+  CC      kernel/nsproxy.o
+  CC      mm/interval_tree.o
+  CC      mm/list_lru.o
+  CC      fs/ext4/inode.o
+  CC      kernel/notifier.o
+  CC      kernel/ksysfs.o
+  CC      fs/ext4/ioctl.o
+  CC      mm/workingset.o
+  CC      kernel/cred.o
+  CC      mm/debug.o
+  CC      mm/gup.o
+  CC      kernel/reboot.o
+  CC      fs/ext4/mballoc.o
+  CC      kernel/async.o
+  CC      ipc/compat.o
+  CC      kernel/range.o
+  CC      ipc/util.o
+  CC      mm/highmem.o
+  CC      kernel/smpboot.o
+  CC      mm/memory.o
+  CC      kernel/ucount.o
+  CC      ipc/msgutil.o
+  CC      ipc/msg.o
+  CC      kernel/kmod.o
+  CC      fs/ext4/migrate.o
+  CC      ipc/sem.o
+  CC      kernel/groups.o
+  CC      fs/ext4/mmp.o
+  CC      fs/ext4/move_extent.o
+  CC      kernel/freezer.o
+  CC      ipc/shm.o
+  CC      mm/mincore.o
+  CC      fs/ext4/namei.o
+  CC      kernel/profile.o
+  CC      mm/mlock.o
+  CC      kernel/stacktrace.o
+  CC      ipc/syscall.o
+  CC      kernel/futex.o
+  CC      ipc/ipc_sysctl.o
+  CC      mm/mmap.o
+  CC      fs/ext4/page-io.o
+  CC      ipc/mqueue.o
+  CC      fs/ext4/readpage.o
+  CC      kernel/dma.o
+  CC      ipc/namespace.o
+  CC      fs/ext4/resize.o
+  CC      kernel/smp.o
+  CC      ipc/mq_sysctl.o
+  AR      ipc/built-in.a
+  CC      mm/mmu_gather.o
+  CC      kernel/uid16.o
+  CC      mm/mprotect.o
+  CC      fs/ext4/super.o
+  CC      kernel/module.o
+  CC      fs/ext4/symlink.o
+  CC      mm/mremap.o
+  CC      mm/msync.o
+  CC      kernel/module_signing.o
+  CC      mm/page_vma_mapped.o
+  CC      kernel/module_signature.o
+  CC      fs/jbd2/transaction.o
+  CC      mm/pagewalk.o
+  CC      kernel/kallsyms.o
+  CC      mm/pgtable-generic.o
+  CC      fs/ext4/sysfs.o
+  CC      fs/jbd2/commit.o
+  CC      fs/ext4/xattr.o
+  CC      mm/rmap.o
+  CC      kernel/acct.o
+  CC      fs/jbd2/recovery.o
+  CC      kernel/crash_core.o
+  CC      fs/jbd2/checkpoint.o
+  CC      mm/vmalloc.o
+  CC      kernel/kexec_core.o
+  CC      fs/ext4/xattr_trusted.o
+  CC      fs/jbd2/revoke.o
+  CC      fs/ext4/xattr_user.o
+  CC      fs/jbd2/journal.o
+  CC      fs/ext4/acl.o
+  CC      kernel/kexec_file.o
+  CC      fs/ext4/xattr_security.o
+  CC      kernel/compat.o
+  CC      mm/process_vm_access.o
+  AR      fs/ext4/built-in.a
+  CC      mm/page_alloc.o
+  CC      kernel/utsname.o
+  AR      fs/jbd2/built-in.a
+  CC      fs/kernfs/mount.o
+  CC      fs/kernfs/inode.o
+  CC      kernel/user_namespace.o
+  CC      mm/init-mm.o
+  CC      fs/kernfs/dir.o
+  CC      fs/kernfs/file.o
+  CC      kernel/pid_namespace.o
+  CC      fs/nls/nls_base.o
+  CC      fs/kernfs/symlink.o
+  CC      kernel/stop_machine.o
+  AR      fs/kernfs/built-in.a
+  CC      mm/memblock.o
+  AR      fs/nls/built-in.a
+  CC      fs/notify/dnotify/dnotify.o
+  CC      kernel/audit.o
+  AR      fs/notify/dnotify/built-in.a
+  CC      fs/notify/fanotify/fanotify.o
+  CC      fs/notify/fanotify/fanotify_user.o
+  CC      mm/madvise.o
+  CC      kernel/auditfilter.o
+  AR      fs/notify/fanotify/built-in.a
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      mm/page_io.o
+  CC      fs/notify/inotify/inotify_user.o
+  CC      kernel/auditsc.o
+  CC      kernel/audit_watch.o
+  CC      mm/swap_state.o
+  AR      fs/notify/inotify/built-in.a
+  CC      fs/notify/fsnotify.o
+  CC      fs/notify/notification.o
+  CC      kernel/audit_fsnotify.o
+  CC      mm/swapfile.o
+  CC      fs/notify/group.o
+  CC      fs/notify/mark.o
+  CC      kernel/audit_tree.o
+  CC      fs/notify/fdinfo.o
+  CC      kernel/kprobes.o
+  CC      fs/overlayfs/super.o
+  AR      fs/notify/built-in.a
+  CC      fs/proc/task_mmu.o
+  CC      fs/overlayfs/namei.o
+  CC      mm/swap_slots.o
+  CC      kernel/seccomp.o
+  CC      fs/overlayfs/util.o
+  CC      mm/frontswap.o
+  CC      fs/proc/inode.o
+  CC      fs/proc/root.o
+  CC      fs/overlayfs/inode.o
+  CC      kernel/relay.o
+  CC      mm/zswap.o
+  CC      fs/proc/base.o
+  CC      fs/overlayfs/file.o
+  CC      fs/overlayfs/dir.o
+  CC      mm/dmapool.o
+  CC      kernel/utsname_sysctl.o
+  CC      kernel/delayacct.o
+  CC      mm/hugetlb.o
+  CC      fs/proc/generic.o
+  CC      fs/overlayfs/readdir.o
+  CC      kernel/taskstats.o
+  CC      kernel/tsacct.o
+  CC      fs/overlayfs/copy_up.o
+  CC      fs/proc/array.o
+  CC      kernel/elfcore.o
+  CC      fs/overlayfs/export.o
+  CC      kernel/irq_work.o
+  CC      fs/proc/fd.o
+  AR      fs/overlayfs/built-in.a
+  CC      fs/proc/proc_tty.o
+  CC      kernel/jump_label.o
+  CC      kernel/iomem.o
+  CC      fs/proc/cmdline.o
+  CC      mm/mempolicy.o
+  CC      fs/proc/consoles.o
+  CC      fs/proc/cpuinfo.o
+  CC      kernel/rseq.o
+  CC      fs/pstore/inode.o
+  CC      fs/proc/devices.o
+  CC      fs/proc/interrupts.o
+  AR      kernel/built-in.a
+  CC      fs/proc/loadavg.o
+  CC      fs/pstore/platform.o
+  CC      security/integrity/iint.o
+  CC      fs/proc/meminfo.o
+  CC      security/integrity/integrity_audit.o
+  AR      fs/pstore/built-in.a
+  CC      fs/quota/dquot.o
+  CC      fs/proc/stat.o
+  CC      mm/sparse.o
+  AR      security/integrity/built-in.a
+  CC      security/keys/encrypted-keys/encrypted.o
+  CC      fs/proc/uptime.o
+  CC      fs/proc/util.o
+  CC      fs/proc/version.o
+  CC      security/keys/encrypted-keys/ecryptfs_format.o
+  CC      fs/proc/softirqs.o
+  AR      security/keys/encrypted-keys/built-in.a
+  CC      mm/sparse-vmemmap.o
+  CC      security/keys/gc.o
+  CC      fs/proc/namespaces.o
+  CC      fs/quota/quota.o
+  CC      security/keys/key.o
+  CC      mm/ksm.o
+  CC      fs/proc/self.o
+  CC      fs/quota/kqid.o
+  CC      fs/proc/thread_self.o
+  CC      security/keys/keyring.o
+  CC      fs/proc/proc_sysctl.o
+  CC      fs/quota/compat.o
+  CC      mm/slub.o
+  CC      fs/quota/netlink.o
+  CC      security/keys/keyctl.o
+  AR      fs/quota/built-in.a
+  CC      security/keys/permission.o
+  CC      fs/proc/proc_net.o
+  CC      fs/proc/kcore.o
+  CC      security/keys/process_keys.o
+  CC      crypto/asymmetric_keys/asymmetric_type.o
+  CC      fs/proc/kmsg.o
+  CC      security/keys/request_key.o
+  CC      fs/proc/page.o
+  CC      crypto/asymmetric_keys/restrict.o
+  CC      mm/memory_hotplug.o
+  CC      crypto/asymmetric_keys/signature.o
+  AR      fs/proc/built-in.a
+  CC      fs/ramfs/inode.o
+  CC      security/keys/request_key_auth.o
+  CC      crypto/asymmetric_keys/public_key.o
+  CC      fs/ramfs/file-mmu.o
+  CC      security/keys/user_defined.o
+  AR      fs/ramfs/built-in.a
+  CC      fs/squashfs/block.o
+  ASN.1   crypto/asymmetric_keys/x509.asn1.[ch]
+  ASN.1   crypto/asymmetric_keys/x509_akid.asn1.[ch]
+  CC      crypto/asymmetric_keys/x509_public_key.o
+  CC      mm/migrate.o
+  CC      security/keys/compat.o
+  CC      fs/squashfs/cache.o
+  ASN.1   crypto/asymmetric_keys/pkcs7.asn1.[ch]
+  CC      crypto/asymmetric_keys/pkcs7_trust.o
+  CC      security/keys/proc.o
+  CC      crypto/asymmetric_keys/pkcs7_verify.o
+  CC      fs/squashfs/dir.o
+  CC      security/keys/sysctl.o
+  CC      fs/squashfs/export.o
+  CC      crypto/asymmetric_keys/verify_pefile.o
+  CC      security/keys/persistent.o
+  CC      fs/squashfs/file.o
+  CC      mm/huge_memory.o
+  CC      security/keys/keyctl_pkey.o
+  ASN.1   crypto/asymmetric_keys/mscode.asn1.[ch]
+  CC      crypto/asymmetric_keys/x509.asn1.o
+  CC      crypto/asymmetric_keys/x509_akid.asn1.o
+  CC      crypto/asymmetric_keys/x509_cert_parser.o
+  CC      fs/squashfs/fragment.o
+  AR      security/keys/built-in.a
+  GEN     security/selinux/flask.h security/selinux/av_permissions.h
+  CC      security/selinux/avc.o
+  CC      fs/squashfs/id.o
+  CC      crypto/asymmetric_keys/pkcs7.asn1.o
+  CC      crypto/asymmetric_keys/pkcs7_parser.o
+  CC      fs/squashfs/inode.o
+  CC      crypto/asymmetric_keys/mscode_parser.o
+  CC      fs/squashfs/namei.o
+  CC      crypto/asymmetric_keys/mscode.asn1.o
+  AR      crypto/asymmetric_keys/built-in.a
+  CC      crypto/api.o
+  CC      security/selinux/hooks.o
+  CC      fs/squashfs/super.o
+  CC      mm/khugepaged.o
+  CC      fs/squashfs/symlink.o
+  CC      crypto/cipher.o
+  CC      fs/squashfs/decompressor.o
+  CC      crypto/compress.o
+  CC      fs/squashfs/file_cache.o
+  CC      crypto/memneq.o
+  CC      fs/squashfs/decompressor_single.o
+  CC      mm/page_counter.o
+  CC      mm/memcontrol.o
+  CC      fs/squashfs/xattr.o
+  CC      crypto/algapi.o
+  CC      fs/squashfs/xattr_id.o
+  CC      security/selinux/selinuxfs.o
+  CC      fs/squashfs/lz4_wrapper.o
+  CC      fs/squashfs/lzo_wrapper.o
+  CC      fs/squashfs/xz_wrapper.o
+  CC      crypto/scatterwalk.o
+  CC      fs/squashfs/zlib_wrapper.o
+  CC      security/selinux/netlink.o
+  CC      fs/squashfs/zstd_wrapper.o
+  CC      security/selinux/nlmsgtab.o
+  CC      crypto/proc.o
+  AR      fs/squashfs/built-in.a
+  CC      fs/sysfs/file.o
+  CC      crypto/aead.o
+  CC      security/selinux/netif.o
+  CC      fs/sysfs/dir.o
+  CC      mm/vmpressure.o
+  CC      fs/sysfs/symlink.o
+  CC      security/selinux/netnode.o
+  CC      crypto/ablkcipher.o
+  CC      mm/swap_cgroup.o
+  CC      fs/sysfs/mount.o
+  CC      mm/hugetlb_cgroup.o
+  CC      crypto/blkcipher.o
+  CC      security/selinux/netport.o
+  CC      fs/sysfs/group.o
+  CC      mm/cleancache.o
+  AR      fs/sysfs/built-in.a
+  CC      fs/open.o
+  CC      security/selinux/ibpkey.o
+  CC      crypto/skcipher.o
+  CC      mm/page_isolation.o
+  CC      mm/zpool.o
+  CC      security/selinux/ss/ebitmap.o
+  CC      fs/read_write.o
+  CC      mm/early_ioremap.o
+  CC      crypto/seqiv.o
+  CC      security/selinux/ss/hashtab.o
+  CC      mm/userfaultfd.o
+  CC      crypto/ahash.o
+  CC      security/selinux/ss/symtab.o
+  CC      security/selinux/ss/sidtab.o
+  CC      mm/percpu-stats.o
+  CC      fs/file_table.o
+  CC      crypto/shash.o
+  CC      mm/memfd.o
+  CC      security/selinux/ss/avtab.o
+  CC      fs/super.o
+  CC      crypto/akcipher.o
+  AR      mm/built-in.a
+  CC      fs/char_dev.o
+  CC      security/selinux/ss/policydb.o
+  CC      crypto/kpp.o
+  CC      security/selinux/ss/services.o
+  CC      fs/stat.o
+  CC      crypto/dh.o
+  CC      fs/exec.o
+  CC      crypto/dh_helper.o
+  CC      security/selinux/ss/conditional.o
+  ASN.1   crypto/rsapubkey.asn1.[ch]
+  ASN.1   crypto/rsaprivkey.asn1.[ch]
+  CC      crypto/rsa.o
+  CC      crypto/rsa_helper.o
+  CC      block/partitions/check.o
+  CC      crypto/rsa-pkcs1pad.o
+  CC      security/selinux/ss/mls.o
+  AR      block/partitions/built-in.a
+  CC      block/bio.o
+  CC      fs/pipe.o
+  CC      crypto/acompress.o
+  CC      security/selinux/ss/status.o
+  CC      fs/namei.o
+  CC      crypto/scompress.o
+  CC      security/selinux/xfrm.o
+  CC      block/elevator.o
+  CC      crypto/algboss.o
+  CC      security/selinux/netlabel.o
+  CC      crypto/testmgr.o
+  CC      block/blk-core.o
+  AR      security/selinux/built-in.a
+  CC      security/commoncap.o
+  CC      crypto/hmac.o
+  CC      fs/fcntl.o
+  CC      crypto/crypto_null.o
+  CC      security/min_addr.o
+  CC      block/blk-sysfs.o
+  CC      security/security.o
+  CC      fs/ioctl.o
+  CC      crypto/md5.o
+  CC      block/blk-flush.o
+  CC      fs/readdir.o
+  CC      crypto/sha1_generic.o
+  CC      block/blk-settings.o
+  CC      crypto/sha256_generic.o
+  CC      fs/select.o
+  CC      security/inode.o
+  CC      block/blk-ioc.o
+  CC      crypto/sha512_generic.o
+  CC      security/lsm_audit.o
+  CC      block/blk-map.o
+  CC      crypto/ecb.o
+  CC      crypto/cbc.o
+  CC      fs/dcache.o
+  CC      security/device_cgroup.o
+  CC      block/blk-exec.o
+  CC      crypto/cts.o
+  AR      security/built-in.a
+  CC      block/blk-merge.o
+  CC      drivers/acpi/acpica/dsargs.o
+  CC      crypto/xts.o
+  CC      drivers/acpi/acpica/dscontrol.o
+  CC      drivers/acpi/acpica/dsdebug.o
+  CC      fs/inode.o
+  CC      crypto/ctr.o
+  CC      drivers/acpi/acpica/dsfield.o
+  CC      block/blk-softirq.o
+  CC      drivers/acpi/acpica/dsinit.o
+  CC      crypto/aes_generic.o
+  CC      block/blk-timeout.o
+  CC      drivers/acpi/acpica/dsmethod.o
+  CC      drivers/acpi/acpica/dsmthdat.o
+  CC      block/blk-lib.o
+  CC      crypto/aes_ti.o
+  CC      drivers/acpi/acpica/dsobject.o
+  CC      fs/attr.o
+  CC      crypto/deflate.o
+  CC      drivers/acpi/acpica/dsopcode.o
+  CC      crypto/crc32c_generic.o
+  CC      block/blk-mq.o
+  CC      drivers/acpi/acpica/dspkginit.o
+  CC      fs/bad_inode.o
+  CC      drivers/acpi/acpica/dsutils.o
+  CC      crypto/crct10dif_common.o
+  CC      fs/file.o
+  CC      drivers/acpi/acpica/dswexec.o
+  CC      crypto/crct10dif_generic.o
+  CC      drivers/acpi/acpica/dswload.o
+  CC      crypto/lzo.o
+  CC      drivers/acpi/acpica/dswload2.o
+  CC      crypto/lzo-rle.o
+  CC      fs/filesystems.o
+  CC      drivers/acpi/acpica/dswscope.o
+  CC      crypto/rng.o
+  CC      drivers/acpi/acpica/dswstate.o
+  CC      block/blk-mq-tag.o
+  CC      drivers/acpi/acpica/evevent.o
+  CC      fs/namespace.o
+  CC      drivers/acpi/acpica/evgpe.o
+  CC      crypto/drbg.o
+  CC      block/blk-stat.o
+  CC      drivers/acpi/acpica/evgpeblk.o
+  CC      drivers/acpi/acpica/evgpeinit.o
+  CC      drivers/acpi/acpica/evgpeutil.o
+  CC      block/blk-mq-sysfs.o
+  CC      crypto/jitterentropy.o
+  CC      crypto/jitterentropy-kcapi.o
+  CC      drivers/acpi/acpica/evglock.o
+  CC      block/blk-mq-cpumap.o
+  CC      drivers/acpi/acpica/evhandler.o
+  CC      crypto/ecc.o
+  CC      drivers/acpi/acpica/evmisc.o
+  CC      fs/seq_file.o
+  CC      block/blk-mq-sched.o
+  CC      drivers/acpi/acpica/evregion.o
+  CC      drivers/acpi/acpica/evrgnini.o
+  CC      fs/xattr.o
+  CC      drivers/acpi/acpica/evsci.o
+  CC      block/ioctl.o
+  CC      crypto/ecdh.o
+  CC      drivers/acpi/acpica/evxface.o
+  CC      crypto/ecdh_helper.o
+  CC      drivers/acpi/acpica/evxfevnt.o
+  CC      block/genhd.o
+  CC      fs/libfs.o
+  CC      crypto/hash_info.o
+  CC      drivers/acpi/acpica/evxfgpe.o
+  CC      crypto/rsapubkey.asn1.o
+  CC      crypto/rsaprivkey.asn1.o
+  AR      crypto/built-in.a
+  CC      block/partition-generic.o
+  CC      drivers/acpi/acpica/evxfregn.o
+  CC      drivers/acpi/acpica/exconcat.o
+  CC      drivers/acpi/acpica/exconfig.o
+  CC      fs/fs-writeback.o
+  CC      block/ioprio.o
+  CC      block/badblocks.o
+  CC      drivers/acpi/acpica/exconvrt.o
+  CC      drivers/acpi/acpica/excreate.o
+  CC      drivers/acpi/acpica/exdebug.o
+  AR      drivers/amba/built-in.a
+  CC      drivers/acpi/acpica/exdump.o
+  CC      block/blk-rq-qos.o
+  AR      drivers/auxdisplay/built-in.a
+  CC      drivers/acpi/acpica/exfield.o
+  AR      drivers/base/firmware_loader/builtin/built-in.a
+  CC      drivers/base/firmware_loader/main.o
+  CC      fs/pnode.o
+  CC      block/bounce.o
+  CC      drivers/acpi/acpica/exfldio.o
+  CC      drivers/acpi/acpica/exmisc.o
+  CC      fs/splice.o
+  CC      block/scsi_ioctl.o
+  CC      drivers/acpi/acpica/exmutex.o
+  AR      drivers/base/firmware_loader/built-in.a
+  CC      drivers/base/power/sysfs.o
+  CC      drivers/acpi/acpica/exnames.o
+  CC      drivers/acpi/acpica/exoparg1.o
+  CC      drivers/base/power/generic_ops.o
+  CC      block/bsg.o
+  CC      drivers/acpi/acpica/exoparg2.o
+  CC      fs/sync.o
+  CC      drivers/base/power/common.o
+  CC      drivers/acpi/acpica/exoparg3.o
+  CC      block/bsg-lib.o
+  CC      drivers/acpi/acpica/exoparg6.o
+  CC      drivers/base/power/qos.o
+  CC      drivers/acpi/acpica/exprep.o
+  CC      fs/utimes.o
+  CC      drivers/acpi/acpica/exregion.o
+  CC      block/blk-cgroup.o
+  CC      drivers/acpi/acpica/exresnte.o
+  CC      drivers/base/power/runtime.o
+  CC      fs/d_path.o
+  CC      drivers/acpi/acpica/exresolv.o
+  CC      drivers/acpi/acpica/exresop.o
+  CC      drivers/base/power/wakeirq.o
+  CC      drivers/acpi/acpica/exserial.o
+  CC      fs/stack.o
+  CC      drivers/acpi/acpica/exstore.o
+  CC      block/blk-throttle.o
+  CC      drivers/base/power/main.o
+  CC      fs/fs_struct.o
+  CC      drivers/acpi/acpica/exstoren.o
+  CC      drivers/acpi/acpica/exstorob.o
+  CC      fs/statfs.o
+  CC      drivers/acpi/acpica/exsystem.o
+  CC      block/compat_ioctl.o
+  CC      drivers/acpi/acpica/extrace.o
+  CC      drivers/acpi/acpica/exutils.o
+  CC      drivers/base/power/wakeup.o
+  CC      block/cmdline-parser.o
+  CC      fs/fs_pin.o
+  CC      drivers/acpi/acpica/hwacpi.o
+  CC      drivers/acpi/acpica/hwesleep.o
+  CC      fs/nsfs.o
+  CC      drivers/acpi/acpica/hwgpe.o
+  CC      block/bio-integrity.o
+  CC      drivers/base/power/wakeup_stats.o
+  CC      fs/fs_types.o
+  CC      drivers/acpi/acpica/hwregs.o
+  AR      drivers/base/power/built-in.a
+  AR      drivers/base/test/built-in.a
+  CC      drivers/base/component.o
+  CC      drivers/acpi/acpica/hwsleep.o
+  CC      fs/fs_context.o
+  CC      block/blk-integrity.o
+  CC      drivers/acpi/acpica/hwvalid.o
+  CC      drivers/acpi/acpica/hwxface.o
+  CC      drivers/base/core.o
+  CC      fs/fs_parser.o
+  CC      drivers/acpi/acpica/hwxfsleep.o
+  CC      block/t10-pi.o
+  CC      fs/fsopen.o
+  CC      drivers/acpi/acpica/nsaccess.o
+  CC      drivers/acpi/acpica/nsalloc.o
+  CC      block/blk-mq-virtio.o
+  CC      fs/buffer.o
+  CC      drivers/acpi/acpica/nsarguments.o
+  CC      drivers/acpi/acpica/nsconvert.o
+  CC      drivers/base/bus.o
+  CC      block/blk-wbt.o
+  CC      drivers/acpi/acpica/nsdump.o
+  CC      drivers/acpi/acpica/nseval.o
+  CC      drivers/base/dd.o
+  CC      drivers/acpi/acpica/nsinit.o
+  CC      block/blk-mq-debugfs.o
+  CC      drivers/acpi/acpica/nsload.o
+  CC      drivers/acpi/acpica/nsnames.o
+  CC      drivers/base/syscore.o
+  CC      fs/block_dev.o
+  CC      drivers/acpi/acpica/nsobject.o
+  CC      block/blk-pm.o
+  CC      drivers/acpi/acpica/nsparse.o
+  CC      drivers/base/driver.o
+  CC      drivers/acpi/acpica/nspredef.o
+  AR      block/built-in.a
+  CC      drivers/acpi/acpica/nsprepkg.o
+  CC      drivers/base/class.o
+  AR      sound/built-in.a
+  CC      drivers/acpi/dptf/int340x_thermal.o
+  CC      drivers/acpi/acpica/nsrepair.o
+  CC      fs/direct-io.o
+  AR      drivers/acpi/dptf/built-in.a
+  CC      drivers/base/platform.o
+  CC      drivers/acpi/acpica/nsrepair2.o
+  CC      drivers/acpi/acpica/nssearch.o
+  CC      drivers/acpi/tables.o
+  CC      drivers/acpi/acpica/nsutils.o
+  CC      drivers/acpi/acpica/nswalk.o
+  CC      drivers/acpi/acpica/nsxfeval.o
+  CC      fs/mpage.o
+  CC      drivers/base/cpu.o
+  CC      drivers/base/firmware.o
+  CC      drivers/acpi/acpica/nsxfname.o
+  CC      drivers/acpi/blacklist.o
+  CC      drivers/base/init.o
+  CC      drivers/base/map.o
+  CC      drivers/acpi/osi.o
+  CC      fs/proc_namespace.o
+  CC      drivers/acpi/acpica/nsxfobj.o
+  CC      drivers/base/devres.o
+  CC      drivers/acpi/acpica/psargs.o
+  CC      fs/eventpoll.o
+  CC      fs/anon_inodes.o
+  CC      drivers/acpi/acpica/psloop.o
+  CC      drivers/base/attribute_container.o
+  CC      drivers/acpi/acpica/psobject.o
+  CC      drivers/block/loop.o
+  CC      drivers/acpi/acpica/psopcode.o
+  CC      drivers/base/transport_class.o
+  CC      drivers/acpi/acpica/psopinfo.o
+  CC      fs/signalfd.o
+  CC      drivers/base/topology.o
+  CC      drivers/acpi/acpica/psparse.o
+  CC      drivers/base/container.o
+  CC      drivers/acpi/acpica/psscope.o
+  CC      fs/timerfd.o
+  CC      drivers/base/property.o
+  CC      drivers/acpi/acpica/pstree.o
+  CC      drivers/block/virtio_blk.o
+  CC      drivers/acpi/acpica/psutils.o
+  CC      fs/eventfd.o
+  CC      drivers/acpi/acpica/pswalk.o
+  AR      drivers/block/built-in.a
+  CC      drivers/acpi/acpica/psxface.o
+  CC      arch/x86/power/cpu.o
+  CC      drivers/acpi/acpica/rsaddr.o
+  CC      drivers/base/cacheinfo.o
+  CC      fs/userfaultfd.o
+  CC      drivers/acpi/acpica/rscalc.o
+  CC      arch/x86/power/hibernate_64.o
+  CC      drivers/base/devcon.o
+  CC      drivers/acpi/acpica/rscreate.o
+  AS      arch/x86/power/hibernate_asm_64.o
+  CC      arch/x86/power/hibernate.o
+  CC      drivers/base/swnode.o
+  CC      drivers/acpi/acpica/rsdumpinfo.o
+  CC      fs/aio.o
+  CC      drivers/acpi/acpica/rsinfo.o
+  AR      arch/x86/power/built-in.a
+  CC      drivers/acpi/acpica/rsio.o
+  CC      drivers/base/devtmpfs.o
+  AR      drivers/bus/built-in.a
+  CC      drivers/base/node.o
+  CC      drivers/acpi/acpica/rsirq.o
+  CC      drivers/acpi/acpica/rslist.o
+  AR      drivers/cdrom/built-in.a
+  CC      net/802/p8022.o
+  CC      drivers/base/memory.o
+  CC      drivers/acpi/acpica/rsmemory.o
+  CC      drivers/acpi/acpica/rsmisc.o
+  CC      drivers/acpi/acpica/rsserial.o
+  CC      fs/io_uring.o
+  CC      drivers/base/module.o
+  CC      net/802/psnap.o
+  CC      drivers/acpi/acpica/rsutils.o
+  AR      drivers/base/built-in.a
+  CC      fs/locks.o
+  CC      drivers/acpi/acpica/rsxface.o
+  CC      net/802/stp.o
+  CC      drivers/acpi/acpica/tbdata.o
+  CC      drivers/acpi/acpica/tbfadt.o
+  AR      net/802/built-in.a
+  CC      net/bpf/test_run.o
+  CC      drivers/acpi/acpica/tbfind.o
+  CC      fs/compat.o
+  CC      drivers/acpi/acpica/tbinstal.o
+  CC      drivers/acpi/acpica/tbprint.o
+  AR      net/bridge/netfilter/built-in.a
+  CC      net/bridge/br.o
+  CC      fs/compat_ioctl.o
+  CC      drivers/acpi/acpica/tbutils.o
+  AR      net/bpf/built-in.a
+  CC      drivers/acpi/acpica/tbxface.o
+  CC      net/bridge/br_device.o
+  CC      drivers/acpi/acpica/tbxfload.o
+  CC      drivers/acpi/acpica/tbxfroot.o
+  CC      fs/binfmt_misc.o
+  CC      net/bridge/br_fdb.o
+  CC      drivers/acpi/acpica/utaddress.o
+  CC      drivers/acpi/acpica/utalloc.o
+  CC      fs/binfmt_script.o
+  CC      fs/binfmt_elf.o
+  CC      drivers/acpi/acpica/utascii.o
+  AR      drivers/char/agp/built-in.a
+  CC      drivers/char/mem.o
+  CC      drivers/acpi/acpica/utbuffer.o
+  CC      drivers/acpi/acpica/utcopy.o
+  CC      fs/compat_binfmt_elf.o
+  CC      drivers/char/random.o
+  CC      drivers/acpi/acpica/utexcep.o
+  CC      net/bridge/br_forward.o
+  CC      drivers/acpi/acpica/utdebug.o
+  CC      drivers/acpi/acpica/utdecode.o
+  CC      drivers/acpi/acpica/utdelete.o
+  CC      fs/mbcache.o
+  CC      net/bridge/br_if.o
+  CC      drivers/acpi/acpica/uterror.o
+  CC      drivers/char/misc.o
+  CC      drivers/acpi/acpica/uteval.o
+  CC      fs/posix_acl.o
+  CC      drivers/char/virtio_console.o
+  CC      drivers/acpi/acpica/utglobal.o
+  CC      drivers/acpi/acpica/uthex.o
+  CC      fs/coredump.o
+  CC      drivers/acpi/acpica/utids.o
+  CC      net/bridge/br_input.o
+  CC      drivers/acpi/acpica/utinit.o
+  AR      drivers/char/built-in.a
+  CC      drivers/acpi/acpica/utlock.o
+  CC      net/bridge/br_ioctl.o
+  CC      drivers/acpi/acpica/utmath.o
+  CC      fs/drop_caches.o
+  CC      drivers/acpi/acpica/utmisc.o
+  CC      drivers/acpi/acpica/utmutex.o
+  AR      drivers/char/ipmi/built-in.a
+  CC      net/bridge/br_stp.o
+  CC      drivers/acpi/acpica/utnonansi.o
+  CC      fs/fhandle.o
+  AR      drivers/clk/actions/built-in.a
+  AR      drivers/clk/analogbits/built-in.a
+  AR      drivers/clk/bcm/built-in.a
+  AR      drivers/clk/imgtec/built-in.a
+  AR      drivers/clk/imx/built-in.a
+  AR      drivers/clk/ingenic/built-in.a
+  AR      drivers/clk/mediatek/built-in.a
+  AR      drivers/clk/mvebu/built-in.a
+  AR      drivers/clk/renesas/built-in.a
+  CC      drivers/acpi/acpica/utobject.o
+  AR      drivers/clk/ti/built-in.a
+  AR      drivers/clk/built-in.a
+  CC      drivers/acpi/acpica/utosi.o
+  CC      fs/dcookies.o
+  CC      drivers/acpi/acpica/utownerid.o
+  CC      net/bridge/br_stp_bpdu.o
+  CC      drivers/acpi/acpica/utpredef.o
+  CC      lib/crypto/aes.o
+  CC      drivers/acpi/acpica/utresdecode.o
+  AR      fs/built-in.a
+  CC      lib/crypto/sha256.o
+  CC      net/bridge/br_stp_if.o
+  CC      drivers/acpi/acpica/utresrc.o
+  CC      drivers/acpi/acpica/utstate.o
+  CC      drivers/acpi/acpica/utstring.o
+  CC      arch/x86/lib/msr-smp.o
+  CC      drivers/acpi/acpica/utstrsuppt.o
+  AR      lib/crypto/built-in.a
+  CC      lib/lz4/lz4_decompress.o
+  CC      arch/x86/lib/cache-smp.o
+  CC      net/bridge/br_stp_timer.o
+  CC      drivers/acpi/acpica/utstrtoul64.o
+  CC      arch/x86/lib/msr.o
+  CC      drivers/acpi/acpica/utxface.o
+  AS      arch/x86/lib/msr-reg.o
+  CC      arch/x86/lib/msr-reg-export.o
+  AS      arch/x86/lib/hweight.o
+  CC      net/bridge/br_netlink.o
+  CC      arch/x86/lib/iomem.o
+  CC      drivers/acpi/acpica/utxfinit.o
+  AR      lib/lz4/built-in.a
+  CC      lib/lzo/lzo1x_compress.o
+  CC      drivers/acpi/acpica/utxferror.o
+  AS      arch/x86/lib/iomap_copy_64.o
+  AS      arch/x86/lib/clear_page_64.o
+  CC      lib/lzo/lzo1x_decompress_safe.o
+  CC      arch/x86/lib/cmdline.o
+  CC      drivers/acpi/acpica/utxfmutex.o
+  AS      arch/x86/lib/cmpxchg16b_emu.o
+  AS      arch/x86/lib/copy_page_64.o
+  AS      arch/x86/lib/copy_user_64.o
+  AR      lib/lzo/built-in.a
+  CC      lib/math/div64.o
+  CC      net/bridge/br_netlink_tunnel.o
+  CC      arch/x86/lib/cpu.o
+  AR      drivers/acpi/acpica/built-in.a
+  CC      lib/math/gcd.o
+  CC      drivers/acpi/osl.o
+  CC      lib/math/lcm.o
+  CC      lib/math/int_pow.o
+  CC      lib/math/int_sqrt.o
+  AS      arch/x86/lib/csum-copy_64.o
+  CC      lib/math/reciprocal_div.o
+  CC      arch/x86/lib/csum-partial_64.o
+  AR      lib/math/built-in.a
+  CC      lib/mpi/generic_mpih-lshift.o
+  CC      net/bridge/br_arp_nd_proxy.o
+  CC      arch/x86/lib/csum-wrappers_64.o
+  CC      lib/mpi/generic_mpih-mul1.o
+  CC      drivers/acpi/utils.o
+  CC      arch/x86/lib/delay.o
+  CC      lib/mpi/generic_mpih-mul2.o
+  CC      net/bridge/br_sysfs_if.o
+  CC      arch/x86/lib/error-inject.o
+  CC      lib/mpi/generic_mpih-mul3.o
+  CC      drivers/acpi/reboot.o
+  AS      arch/x86/lib/getuser.o
+  CC      lib/mpi/generic_mpih-rshift.o
+  GEN     arch/x86/lib/inat-tables.c
+  CC      arch/x86/lib/insn-eval.o
+  CC      drivers/acpi/nvs.o
+  CC      lib/mpi/generic_mpih-sub1.o
+  CC      net/bridge/br_sysfs_br.o
+  CC      drivers/acpi/wakeup.o
+  CC      arch/x86/lib/insn.o
+  CC      lib/mpi/generic_mpih-add1.o
+  AS      arch/x86/lib/memcpy_64.o
+  AS      arch/x86/lib/memmove_64.o
+  CC      lib/mpi/mpicoder.o
+  CC      drivers/acpi/sleep.o
+  AS      arch/x86/lib/memset_64.o
+  CC      net/bridge/br_nf_core.o
+  CC      arch/x86/lib/misc.o
+  AS      arch/x86/lib/putuser.o
+  AS      arch/x86/lib/retpoline.o
+  CC      lib/mpi/mpi-bit.o
+  CC      arch/x86/lib/usercopy.o
+  CC      drivers/acpi/device_sysfs.o
+  CC      net/bridge/br_multicast.o
+  CC      lib/mpi/mpi-cmp.o
+  CC      arch/x86/lib/usercopy_64.o
+  CC      drivers/acpi/device_pm.o
+  CC      lib/mpi/mpih-cmp.o
+  CC      arch/x86/lib/inat.o
+  CC      lib/mpi/mpih-div.o
+  AR      arch/x86/lib/lib.a
+  EXPORTS arch/x86/lib/lib-ksyms.o
+  AR      arch/x86/lib/built-in.a
+  CC      lib/mpi/mpih-mul.o
+  CC      drivers/acpi/proc.o
+  AR      virt/lib/built-in.a
+  CC      lib/mpi/mpi-pow.o
+  AR      virt/built-in.a
+  CC      lib/xz/xz_dec_syms.o
+  CC      net/bridge/br_mdb.o
+  CC      lib/xz/xz_dec_stream.o
+  CC      drivers/acpi/bus.o
+  CC      lib/mpi/mpiutil.o
+  CC      lib/xz/xz_dec_lzma2.o
+  CC      net/bridge/br_netfilter_hooks.o
+  AR      lib/mpi/built-in.a
+  CC      lib/xz/xz_dec_bcj.o
+  CC      drivers/clocksource/acpi_pm.o
+  CC      drivers/acpi/glue.o
+  CC      drivers/clocksource/i8253.o
+  AR      lib/xz/built-in.a
+  CC      lib/zlib_deflate/deflate.o
+  AR      drivers/clocksource/built-in.a
+  CC      lib/zlib_deflate/deftree.o
+  CC      drivers/acpi/scan.o
+  CC      drivers/connector/cn_queue.o
+  CC      net/bridge/br_netfilter_ipv6.o
+  CC      lib/zlib_deflate/deflate_syms.o
+  AR      lib/zlib_deflate/built-in.a
+  CC      lib/zlib_inflate/inffast.o
+  CC      drivers/connector/connector.o
+  CC      lib/zlib_inflate/inflate.o
+  AR      net/bridge/built-in.a
+  CC      net/core/sock.o
+  CC      drivers/acpi/resource.o
+  CC      lib/zlib_inflate/infutil.o
+  CC      lib/zlib_inflate/inftrees.o
+  CC      drivers/acpi/acpi_processor.o
+  CC      lib/zlib_inflate/inflate_syms.o
+  CC      drivers/connector/cn_proc.o
+  AR      lib/zlib_inflate/built-in.a
+  CC      lib/zstd/huf_decompress.o
+  CC      drivers/acpi/processor_core.o
+  AR      drivers/connector/built-in.a
+  CC      lib/zstd/decompress.o
+  CC      drivers/acpi/processor_pdc.o
+  CC      drivers/acpi/ec.o
+  CC      net/core/request_sock.o
+  CC      lib/zstd/entropy_common.o
+  CC      lib/lockref.o
+  CC      drivers/acpi/acpi_apd.o
+  CC      lib/zstd/fse_decompress.o
+  CC      net/core/skbuff.o
+  CC      lib/zstd/zstd_common.o
+  CC      lib/bcd.o
+  CC      drivers/acpi/acpi_platform.o
+  AR      lib/zstd/built-in.a
+  CC      drivers/acpi/acpi_pnp.o
+  CC      lib/sort.o
+  CC      lib/parser.o
+  CC      lib/debug_locks.o
+  CC      drivers/acpi/power.o
+  CC      lib/random32.o
+  CC      drivers/acpi/event.o
+  CC      lib/bust_spinlocks.o
+  CC      lib/kasprintf.o
+  CC      net/core/datagram.o
+  CC      lib/bitmap.o
+  CC      drivers/acpi/evged.o
+  CC      drivers/acpi/sysfs.o
+  CC      lib/scatterlist.o
+  CC      drivers/acpi/property.o
+  CC      net/core/stream.o
+  CC      lib/list_sort.o
+  CC      drivers/acpi/acpi_cmos_rtc.o
+  CC      lib/uuid.o
+  CC      net/core/scm.o
+  CC      lib/iov_iter.o
+  CC      drivers/acpi/x86/apple.o
+  CC      drivers/acpi/x86/utils.o
+  CC      drivers/cpufreq/cpufreq.o
+  CC      drivers/acpi/debugfs.o
+  CC      net/core/gen_stats.o
+  CC      drivers/acpi/acpi_lpat.o
+  CC      lib/clz_ctz.o
+  CC      lib/bsearch.o
+  CC      drivers/cpufreq/freq_table.o
+  CC      drivers/acpi/acpi_lpit.o
+  CC      net/core/gen_estimator.o
+  CC      drivers/cpufreq/cpufreq_stats.o
+  CC      lib/find_bit.o
+  CC      drivers/acpi/ac.o
+  CC      lib/llist.o
+  CC      lib/memweight.o
+  CC      drivers/cpufreq/cpufreq_performance.o
+  CC      lib/kfifo.o
+  CC      drivers/acpi/button.o
+  CC      drivers/cpufreq/intel_pstate.o
+  CC      net/core/net_namespace.o
+  CC      lib/percpu-refcount.o
+  CC      drivers/acpi/fan.o
+  CC      lib/rhashtable.o
+  CC      drivers/acpi/processor_driver.o
+  AR      drivers/cpufreq/built-in.a
+  CC      drivers/acpi/processor_idle.o
+  CC      drivers/cpuidle/governors/ladder.o
+  CC      net/core/secure_seq.o
+  CC      drivers/cpuidle/governors/menu.o
+  CC      drivers/acpi/processor_throttling.o
+  CC      lib/once.o
+  AR      drivers/cpuidle/governors/built-in.a
+  CC      drivers/cpuidle/cpuidle.o
+  CC      lib/refcount.o
+  CC      drivers/acpi/processor_thermal.o
+  CC      lib/usercopy.o
+  CC      net/core/flow_dissector.o
+  CC      lib/errseq.o
+  CC      drivers/acpi/processor_perflib.o
+  CC      drivers/cpuidle/driver.o
+  CC      lib/bucket_locks.o
+  CC      drivers/cpuidle/governor.o
+  CC      lib/generic-radix-tree.o
+  CC      drivers/acpi/container.o
+  CC      drivers/cpuidle/sysfs.o
+  CC      drivers/acpi/thermal.o
+  CC      drivers/cpuidle/poll_state.o
+  CC      lib/string_helpers.o
+  CC      drivers/cpuidle/cpuidle-haltpoll.o
+  CC      net/core/sysctl_net_core.o
+  CC      drivers/acpi/acpi_memhotplug.o
+  AR      drivers/cpuidle/built-in.a
+  CC      net/core/dev.o
+  CC      lib/hexdump.o
+  CC      drivers/acpi/battery.o
+  CC      lib/kstrtox.o
+  CC      lib/iomap.o
+  AR      drivers/crypto/hisilicon/built-in.a
+  AR      drivers/crypto/built-in.a
+  CC      lib/pci_iomap.o
+  CC      drivers/acpi/cppc_acpi.o
+  CC      drivers/acpi/spcr.o
+  CC      lib/iomap_copy.o
+  CC      lib/devres.o
+  CC      lib/logic_pio.o
+  AR      drivers/acpi/built-in.a
+  CC      lib/assoc_array.o
+  AR      drivers/dma/mediatek/built-in.a
+  AR      drivers/dma/qcom/built-in.a
+  AR      drivers/dma/ti/built-in.a
+  AR      drivers/dma/xilinx/built-in.a
+  CC      drivers/dma/acpi-dma.o
+  CC      net/dcb/dcbnl.o
+  CC      lib/list_debug.o
+  CC      lib/bitrev.o
+  AR      drivers/dma/built-in.a
+  CC      drivers/dma-buf/dma-buf.o
+  CC      lib/crc-ccitt.o
+  CC      lib/crc16.o
+  CC      drivers/dma-buf/dma-fence.o
+  CC      net/dcb/dcbevent.o
+  CC      lib/crc-t10dif.o
+  CC      drivers/dma-buf/dma-fence-array.o
+  HOSTCC  lib/gen_crc32table
+  CC      lib/libcrc32c.o
+  AR      net/dcb/built-in.a
+  CC      drivers/dma-buf/dma-fence-chain.o
+  CC      net/core/ethtool.o
+  CC      lib/xxhash.o
+  CC      net/ethernet/eth.o
+  CC      drivers/dma-buf/dma-resv.o
+  CC      lib/percpu_counter.o
+  CC      lib/error-inject.o
+  CC      drivers/dma-buf/seqno-fence.o
+  CC      lib/syscall.o
+  AR      net/ethernet/built-in.a
+  CC      drivers/dma-buf/sync_file.o
+  CC      net/ipv4/netfilter/nf_defrag_ipv4.o
+  CC      lib/dynamic_debug.o
+  CC      net/core/dev_addr_lists.o
+  AR      drivers/dma-buf/built-in.a
+  AR      drivers/firewire/built-in.a
+  AR      drivers/firmware/broadcom/built-in.a
+  AR      drivers/firmware/imx/built-in.a
+  AR      drivers/firmware/meson/built-in.a
+  AR      drivers/firmware/psci/built-in.a
+  AR      drivers/firmware/tegra/built-in.a
+  AR      drivers/firmware/xilinx/built-in.a
+  CC      drivers/firmware/dmi_scan.o
+  CC      net/ipv4/netfilter/nf_log_arp.o
+  CC      net/core/dst.o
+  CC      lib/nlattr.o
+  CC      drivers/firmware/dmi-id.o
+  CC      net/ipv4/netfilter/nf_log_ipv4.o
+  CC      drivers/firmware/memmap.o
+  CC      lib/cpu_rmap.o
+  AR      drivers/firmware/built-in.a
+  AR      drivers/gpu/drm/arm/built-in.a
+  AR      drivers/gpu/drm/bridge/synopsys/built-in.a
+  AR      drivers/gpu/drm/bridge/built-in.a
+  AR      drivers/gpu/drm/hisilicon/built-in.a
+  CC      net/core/netevent.o
+  AR      drivers/gpu/drm/i2c/built-in.a
+  AR      drivers/gpu/drm/omapdrm/displays/built-in.a
+  AR      drivers/gpu/drm/omapdrm/dss/built-in.a
+  AR      drivers/gpu/drm/omapdrm/built-in.a
+  AR      drivers/gpu/drm/panel/built-in.a
+  AR      drivers/gpu/drm/rcar-du/built-in.a
+  AR      drivers/gpu/drm/tilcdc/built-in.a
+  AR      drivers/gpu/drm/tiny/built-in.a
+  AR      drivers/gpu/drm/built-in.a
+  AR      drivers/gpu/vga/built-in.a
+  AR      drivers/gpu/built-in.a
+  CC      drivers/hid/hid-core.o
+  CC      net/ipv4/netfilter/nf_reject_ipv4.o
+  CC      lib/dynamic_queue_limits.o
+  CC      lib/strncpy_from_user.o
+  CC      net/core/neighbour.o
+  CC      lib/strnlen_user.o
+  CC      net/ipv4/netfilter/ip_tables.o
+  CC      drivers/hid/hid-input.o
+  CC      lib/net_utils.o
+  CC      lib/sg_pool.o
+  CC      lib/irq_poll.o
+  CC      drivers/hid/hid-quirks.o
+  CC      net/ipv4/netfilter/iptable_filter.o
+  CC      lib/asn1_decoder.o
+  CC      net/core/rtnetlink.o
+  CC      drivers/hid/hid-debug.o
+  GEN     lib/oid_registry_data.c
+  CC      lib/sbitmap.o
+  CC      net/ipv4/netfilter/iptable_mangle.o
+  CC      drivers/hid/hidraw.o
+  CC      lib/argv_split.o
+  CC      net/ipv4/netfilter/iptable_nat.o
+  CC      drivers/hid/hid-redragon.o
+  CC      lib/bug.o
+  CC      lib/chacha.o
+  AR      drivers/hid/built-in.a
+  AR      drivers/hwtracing/intel_th/built-in.a
+  AR      drivers/i2c/algos/built-in.a
+  AR      drivers/i2c/busses/built-in.a
+  AR      drivers/i2c/muxes/built-in.a
+  AR      drivers/i2c/built-in.a
+  AR      drivers/i3c/built-in.a
+  CC      drivers/idle/intel_idle.o
+  CC      net/ipv4/netfilter/ipt_REJECT.o
+  CC      lib/clz_tab.o
+  CC      lib/cmdline.o
+  CC      lib/cpumask.o
+  AR      drivers/idle/built-in.a
+  CC      drivers/input/keyboard/atkbd.o
+  CC      net/ipv4/netfilter/ipt_SYNPROXY.o
+  CC      net/core/utils.o
+  CC      lib/ctype.o
+  CC      lib/dec_and_lock.o
+  AR      drivers/input/keyboard/built-in.a
+  AR      drivers/input/misc/built-in.a
+  CC      drivers/input/input.o
+  CC      lib/decompress.o
+  CC      lib/decompress_bunzip2.o
+  AR      net/ipv4/netfilter/built-in.a
+  CC      net/ipv4/route.o
+  CC      lib/decompress_inflate.o
+  CC      net/core/link_watch.o
+  CC      lib/decompress_unlz4.o
+  CC      drivers/input/input-compat.o
+  CC      lib/decompress_unlzma.o
+  CC      drivers/input/input-mt.o
+  CC      lib/decompress_unlzo.o
+  CC      net/core/filter.o
+  CC      lib/decompress_unxz.o
+  CC      drivers/input/input-poller.o
+  CC      lib/dump_stack.o
+  CC      net/ipv4/inetpeer.o
+  CC      drivers/input/ff-core.o
+  CC      lib/earlycpio.o
+  CC      lib/extable.o
+  CC      drivers/input/ff-memless.o
+  CC      lib/flex_proportions.o
+  CC      lib/idr.o
+  CC      net/ipv4/protocol.o
+  AR      drivers/input/built-in.a
+  CC      drivers/input/serio/serio.o
+  CC      lib/ioremap.o
+  CC      lib/irq_regs.o
+  CC      drivers/input/serio/i8042.o
+  CC      net/ipv4/ip_input.o
+  CC      lib/is_single_threaded.o
+  CC      lib/klist.o
+  CC      lib/kobject.o
+  CC      drivers/input/serio/serport.o
+  CC      net/core/sock_diag.o
+  CC      net/ipv4/ip_fragment.o
+  CC      lib/kobject_uevent.o
+  CC      drivers/input/serio/libps2.o
+  AR      drivers/input/serio/built-in.a
+  AR      drivers/iommu/built-in.a
+  AR      drivers/irqchip/built-in.a
+  AR      drivers/macintosh/built-in.a
+  CC      drivers/mailbox/mailbox.o
+  CC      net/core/dev_ioctl.o
+  CC      net/ipv4/ip_forward.o
+  CC      lib/memcat_p.o
+  CC      drivers/mailbox/pcc.o
+  CC      lib/nmi_backtrace.o
+  CC      net/core/tso.o
+  CC      net/ipv4/ip_options.o
+  AR      drivers/mailbox/built-in.a
+  CC      lib/nodemask.o
+  AR      drivers/media/common/b2c2/built-in.a
+  AR      drivers/media/common/saa7146/built-in.a
+  AR      drivers/media/common/siano/built-in.a
+  AR      drivers/media/common/v4l2-tpg/built-in.a
+  AR      drivers/media/common/videobuf2/built-in.a
+  AR      drivers/media/common/built-in.a
+  AR      drivers/media/firewire/built-in.a
+  AR      drivers/media/i2c/built-in.a
+  AR      drivers/media/mmc/siano/built-in.a
+  AR      drivers/media/mmc/built-in.a
+  AR      drivers/media/pci/b2c2/built-in.a
+  AR      drivers/media/pci/ddbridge/built-in.a
+  AR      drivers/media/pci/dm1105/built-in.a
+  AR      drivers/media/pci/intel/ipu3/built-in.a
+  AR      drivers/media/pci/intel/built-in.a
+  AR      drivers/media/pci/mantis/built-in.a
+  AR      drivers/media/pci/netup_unidvb/built-in.a
+  AR      drivers/media/pci/ngene/built-in.a
+  CC      lib/plist.o
+  AR      drivers/media/pci/pluto2/built-in.a
+  AR      drivers/media/pci/pt1/built-in.a
+  AR      drivers/media/pci/pt3/built-in.a
+  AR      drivers/media/pci/saa7146/built-in.a
+  AR      drivers/media/pci/smipcie/built-in.a
+  AR      drivers/media/pci/ttpci/built-in.a
+  CC      lib/radix-tree.o
+  AR      drivers/media/pci/built-in.a
+  AR      drivers/media/platform/cros-ec-cec/built-in.a
+  AR      drivers/media/platform/davinci/built-in.a
+  AR      drivers/media/platform/meson/built-in.a
+  AR      drivers/media/platform/omap/built-in.a
+  AR      drivers/media/platform/stm32/built-in.a
+  AR      drivers/media/platform/sunxi/sun4i-csi/built-in.a
+  AR      drivers/media/platform/sunxi/sun6i-csi/built-in.a
+  AR      drivers/media/platform/sunxi/built-in.a
+  AR      drivers/media/platform/built-in.a
+  AR      drivers/media/rc/keymaps/built-in.a
+  AR      drivers/media/rc/built-in.a
+  AR      drivers/media/spi/built-in.a
+  AR      drivers/media/tuners/built-in.a
+  AR      drivers/media/usb/b2c2/built-in.a
+  AR      drivers/media/usb/dvb-usb/built-in.a
+  CC      net/core/sock_reuseport.o
+  AR      drivers/media/usb/dvb-usb-v2/built-in.a
+  AR      drivers/media/usb/s2255/built-in.a
+  AR      drivers/media/usb/siano/built-in.a
+  AR      drivers/media/usb/stkwebcam/built-in.a
+  AR      drivers/media/usb/ttusb-budget/built-in.a
+  AR      drivers/media/usb/ttusb-dec/built-in.a
+  AR      drivers/media/usb/zr364xx/built-in.a
+  AR      drivers/media/usb/built-in.a
+  AR      drivers/media/built-in.a
+  AR      drivers/mfd/built-in.a
+  AR      drivers/misc/cardreader/built-in.a
+  AR      drivers/misc/cb710/built-in.a
+  AR      drivers/misc/eeprom/built-in.a
+  AR      drivers/misc/lis3lv02d/built-in.a
+  AR      drivers/misc/mic/bus/built-in.a
+  AR      drivers/misc/mic/built-in.a
+  AR      drivers/misc/ti-st/built-in.a
+  CC      net/ipv4/ip_output.o
+  AR      drivers/misc/built-in.a
+  AR      drivers/mmc/built-in.a
+  AR      drivers/net/dsa/b53/built-in.a
+  AR      drivers/net/dsa/microchip/built-in.a
+  AR      drivers/net/dsa/mv88e6xxx/built-in.a
+  CC      lib/ratelimit.o
+  AR      drivers/net/dsa/sja1105/built-in.a
+  AR      drivers/net/dsa/built-in.a
+  AR      drivers/net/phy/built-in.a
+  CC      drivers/net/Space.o
+  CC      lib/rbtree.o
+  CC      drivers/net/loopback.o
+  CC      net/core/fib_notifier.o
+  CC      lib/seq_buf.o
+  CC      lib/sha1.o
+  CC      lib/show_mem.o
+  CC      net/core/xdp.o
+  CC      drivers/net/tun.o
+  CC      lib/siphash.o
+  CC      net/ipv4/ip_sockglue.o
+  CC      lib/string.o
+  CC      net/core/flow_offload.o
+  CC      lib/timerqueue.o
+  CC      lib/vsprintf.o
+  CC      net/ipv4/inet_hashtables.o
+  CC      net/core/net-sysfs.o
+  CC      drivers/net/veth.o
+  CC      lib/win_minmax.o
+  CC      net/ipv4/inet_timewait_sock.o
+  CC      drivers/net/virtio_net.o
+  CC      lib/xarray.o
+  CC      net/core/net-procfs.o
+  CC      net/core/skmsg.o
+  GEN     lib/crc32table.h
+  CC      lib/oid_registry.o
+  CC      net/ipv4/inet_connection_sock.o
+  AR      lib/lib.a
+  CC      lib/crc32.o
+  EXPORTS lib/lib-ksyms.o
+  AR      lib/built-in.a
+  CC      drivers/net/net_failover.o
+  AR      drivers/nfc/built-in.a
+  CC      net/ipv6/netfilter/nf_defrag_ipv6_hooks.o
+  CC      net/core/fib_rules.o
+  CC      net/ipv4/tcp.o
+  AR      drivers/net/built-in.a
+  AR      drivers/nvme/host/built-in.a
+  AR      drivers/nvme/target/built-in.a
+  AR      drivers/nvme/built-in.a
+  AR      drivers/pci/controller/dwc/built-in.a
+  AR      drivers/pci/controller/built-in.a
+  AR      drivers/pci/switch/built-in.a
+  CC      net/ipv6/netfilter/nf_conntrack_reasm.o
+  AR      drivers/pci/built-in.a
+  AR      drivers/perf/built-in.a
+  CC      drivers/platform/x86/intel_turbo_max_3.o
+  AR      drivers/platform/x86/built-in.a
+  AR      drivers/platform/built-in.a
+  CC      drivers/pnp/pnpacpi/core.o
+  CC      net/core/timestamping.o
+  CC      drivers/pnp/pnpacpi/rsparser.o
+  AR      net/ipv6/netfilter/built-in.a
+  CC      net/ipv6/af_inet6.o
+  AR      drivers/pnp/pnpacpi/built-in.a
+  CC      drivers/pnp/core.o
+  CC      net/core/ptp_classifier.o
+  CC      drivers/pnp/card.o
+  CC      net/ipv4/tcp_input.o
+  CC      net/ipv6/anycast.o
+  CC      net/core/netprio_cgroup.o
+  CC      drivers/pnp/driver.o
+  CC      drivers/pnp/resource.o
+  CC      net/core/netclassid_cgroup.o
+  CC      net/ipv6/ip6_output.o
+  CC      drivers/pnp/manager.o
+  CC      net/core/lwtunnel.o
+  CC      drivers/pnp/support.o
+  CC      drivers/pnp/interface.o
+  CC      drivers/pnp/quirks.o
+  CC      net/ipv4/tcp_output.o
+  CC      net/core/lwt_bpf.o
+  CC      drivers/pnp/system.o
+  CC      net/ipv6/ip6_input.o
+  AR      drivers/pnp/built-in.a
+  AR      drivers/power/reset/built-in.a
+  CC      drivers/power/supply/power_supply_core.o
+  CC      net/core/sock_map.o
+  CC      drivers/power/supply/power_supply_sysfs.o
+  AR      drivers/power/supply/built-in.a
+  AR      drivers/power/built-in.a
+  AR      drivers/pps/clients/built-in.a
+  AR      drivers/pps/generators/built-in.a
+  CC      drivers/pps/pps.o
+  CC      net/ipv6/addrconf.o
+  CC      drivers/pps/kapi.o
+  CC      net/core/dst_cache.o
+  CC      net/ipv4/tcp_timer.o
+  CC      drivers/pps/sysfs.o
+  AR      drivers/pps/built-in.a
+  CC      drivers/ptp/ptp_clock.o
+  CC      net/core/gro_cells.o
+  CC      drivers/ptp/ptp_chardev.o
+  CC      net/ipv4/tcp_ipv4.o
+  CC      net/core/failover.o
+  CC      drivers/ptp/ptp_sysfs.o
+  CC      drivers/ptp/ptp_kvm.o
+  AR      drivers/ptp/built-in.a
+  AR      drivers/pwm/built-in.a
+  CC      drivers/ras/ras.o
+  CC      net/core/bpf_sk_storage.o
+  CC      net/ipv6/addrlabel.o
+  CC      drivers/ras/debugfs.o
+  AR      drivers/ras/built-in.a
+  CC      drivers/rtc/lib.o
+  AR      net/core/built-in.a
+  CC      drivers/rtc/rtc-mc146818-lib.o
+  CC      net/ipv6/route.o
+  CC      net/llc/llc_core.o
+  CC      net/ipv4/tcp_minisocks.o
+  AR      drivers/rtc/built-in.a
+  CC      drivers/scsi/scsi.o
+  CC      net/llc/llc_input.o
+  CC      drivers/scsi/hosts.o
+  CC      net/ipv4/tcp_cong.o
+  CC      net/llc/llc_output.o
+  CC      drivers/scsi/scsi_ioctl.o
+  AR      net/llc/built-in.a
+  CC      drivers/scsi/scsicam.o
+  CC      net/ipv4/tcp_metrics.o
+  CC      net/ipv6/ip6_fib.o
+  CC      drivers/scsi/scsi_error.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      net/ipv4/tcp_fastopen.o
+  CC      net/ipv6/ipv6_sockglue.o
+  CC      drivers/scsi/constants.o
+  CC      net/ipv6/ndisc.o
+  CC      net/ipv4/tcp_rate.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  CC      drivers/scsi/scsi_scan.o
+  GEN     drivers/scsi/scsi_devinfo_tbl.c
+  CC      net/ipv6/udp.o
+  CC      net/ipv4/tcp_recovery.o
+  CC      net/ipv4/tcp_ulp.o
+  CC      drivers/scsi/scsi_devinfo.o
+  CC      net/ipv4/tcp_offload.o
+  AR      net/mpls/built-in.a
+  CC      net/ipv4/datagram.o
+  CC      drivers/scsi/scsi_sysctl.o
+  CC      drivers/scsi/scsi_proc.o
+  CC      net/ipv6/udplite.o
+  CC      drivers/scsi/scsi_debugfs.o
+  CC      net/netfilter/core.o
+  CC      drivers/scsi/scsi_trace.o
+  CC      net/ipv4/raw.o
+  CC      net/ipv6/raw.o
+  CC      drivers/scsi/scsi_logging.o
+  CC      net/netfilter/nf_log.o
+  CC      drivers/scsi/scsi_pm.o
+  CC      net/ipv4/udp.o
+  CC      drivers/scsi/scsi_common.o
+  CC      net/ipv6/icmp.o
+  CC      drivers/scsi/scsi_transport_iscsi.o
+  CC      net/netfilter/nf_queue.o
+  CC      net/ipv6/mcast.o
+  CC      net/netfilter/nf_sockopt.o
+  CC      net/ipv4/udplite.o
+  CC      net/netfilter/utils.o
+  CC      drivers/scsi/libiscsi.o
+  CC      net/ipv4/udp_offload.o
+  CC      net/netfilter/nf_conntrack_core.o
+  CC      net/ipv6/reassembly.o
+  CC      net/ipv6/tcp_ipv6.o
+  CC      net/ipv4/arp.o
+  CC      drivers/scsi/libiscsi_tcp.o
+  CC      net/netfilter/nf_conntrack_standalone.o
+  CC      net/ipv4/icmp.o
+  CC      net/ipv6/ping.o
+  CC      drivers/scsi/iscsi_tcp.o
+  CC      net/netfilter/nf_conntrack_expect.o
+  CC      net/ipv6/exthdrs.o
+  CC      net/ipv4/devinet.o
+  CC      drivers/scsi/scsi_sysfs.o
+  CC      net/netfilter/nf_conntrack_helper.o
+  AR      drivers/scsi/built-in.a
+  AR      drivers/soc/amlogic/built-in.a
+  AR      drivers/soc/bcm/built-in.a
+  AR      drivers/soc/fsl/built-in.a
+  AR      drivers/soc/mediatek/built-in.a
+  AR      drivers/soc/qcom/built-in.a
+  AR      drivers/soc/renesas/built-in.a
+  AR      drivers/soc/sunxi/built-in.a
+  CC      net/ipv6/datagram.o
+  AR      drivers/soc/ti/built-in.a
+  AR      drivers/soc/xilinx/built-in.a
+  AR      drivers/soc/built-in.a
+  AR      drivers/staging/media/built-in.a
+  AR      drivers/staging/built-in.a
+  AR      drivers/thermal/broadcom/built-in.a
+  AR      drivers/thermal/intel/built-in.a
+  AR      drivers/thermal/samsung/built-in.a
+  AR      drivers/thermal/st/built-in.a
+  AR      drivers/thermal/tegra/built-in.a
+  CC      drivers/thermal/thermal_core.o
+  CC      net/ipv4/af_inet.o
+  CC      net/netfilter/nf_conntrack_proto.o
+  CC      net/ipv6/ip6_flowlabel.o
+  CC      drivers/thermal/thermal_sysfs.o
+  CC      drivers/thermal/thermal_helpers.o
+  CC      net/netfilter/nf_conntrack_proto_generic.o
+  CC      net/ipv4/igmp.o
+  CC      drivers/thermal/fair_share.o
+  CC      net/ipv6/inet6_connection_sock.o
+  CC      drivers/thermal/step_wise.o
+  CC      net/netfilter/nf_conntrack_proto_tcp.o
+  CC      drivers/thermal/user_space.o
+  AR      drivers/thermal/built-in.a
+  CC      drivers/tty/hvc/hvc_console.o
+  CC      net/ipv6/udp_offload.o
+  AR      drivers/tty/hvc/built-in.a
+  CC      net/netfilter/nf_conntrack_proto_udp.o
+  AR      drivers/tty/ipwireless/built-in.a
+  CC      drivers/tty/serdev/core.o
+  CC      net/ipv6/seg6.o
+  CC      net/ipv4/fib_frontend.o
+  CC      drivers/tty/serdev/serdev-ttyport.o
+  CC      net/netfilter/nf_conntrack_proto_icmp.o
+  AR      drivers/tty/serdev/built-in.a
+  CC      drivers/tty/serial/8250/8250_core.o
+  CC      net/ipv6/fib6_notifier.o
+  CC      net/netfilter/nf_conntrack_extend.o
+  CC      net/ipv6/sysctl_net_ipv6.o
+  CC      drivers/tty/serial/8250/8250_pnp.o
+  CC      net/ipv4/fib_semantics.o
+  CC      drivers/tty/serial/8250/8250_port.o
+  CC      net/ipv6/ip6mr.o
+  CC      net/netfilter/nf_conntrack_acct.o
+  CC      net/netfilter/nf_conntrack_seqadj.o
+  CC      drivers/tty/serial/8250/8250_dma.o
+  CC      net/ipv4/fib_trie.o
+  CC      drivers/tty/serial/8250/8250_early.o
+  CC      net/ipv6/xfrm6_policy.o
+  AR      drivers/tty/serial/8250/built-in.a
+  CC      net/netfilter/nf_conntrack_proto_icmpv6.o
+  CC      drivers/tty/serial/serial_core.o
+  CC      net/ipv6/xfrm6_state.o
+  CC      net/netfilter/nf_conntrack_timeout.o
+  CC      net/ipv4/fib_notifier.o
+  CC      net/ipv6/xfrm6_input.o
+  CC      drivers/tty/serial/earlycon.o
+  AR      drivers/tty/serial/built-in.a
+  CC      drivers/tty/vt/vt_ioctl.o
+  CC      net/ipv4/inet_fragment.o
+  CC      net/netfilter/nf_conntrack_timestamp.o
+  CC      net/ipv6/xfrm6_output.o
+  CC      net/netfilter/nf_conntrack_ecache.o
+  CC      drivers/tty/vt/vc_screen.o
+  CC      net/ipv4/ping.o
+  CC      drivers/tty/vt/selection.o
+  CC      net/ipv6/xfrm6_protocol.o
+  CC      net/netfilter/nf_conntrack_proto_dccp.o
+  CC      drivers/tty/vt/keyboard.o
+  CC      net/netfilter/nf_conntrack_proto_sctp.o
+  CC      net/ipv4/ip_tunnel_core.o
+  CC      net/ipv6/netfilter.o
+  CC      drivers/tty/vt/consolemap.o
+  CC      net/netfilter/nf_log_common.o
+  CC      net/ipv4/gre_offload.o
+  CC      net/ipv6/fib6_rules.o
+  CONMK   drivers/tty/vt/consolemap_deftbl.c
+  CC      drivers/tty/vt/vt.o
+  CC      net/netfilter/nf_nat_core.o
+  CC      net/ipv4/metrics.o
+  CC      net/ipv6/proc.o
+  SHIPPED drivers/tty/vt/defkeymap.c
+  CC      drivers/tty/vt/consolemap_deftbl.o
+  CC      net/ipv4/netlink.o
+  CC      drivers/tty/vt/defkeymap.o
+  AR      drivers/tty/vt/built-in.a
+  CC      drivers/tty/tty_io.o
+  CC      net/netfilter/nf_nat_proto.o
+  CC      net/ipv6/syncookies.o
+  CC      net/ipv4/nexthop.o
+  CC      net/ipv6/calipso.o
+  CC      net/netfilter/nf_nat_helper.o
+  CC      drivers/tty/n_tty.o
+  CC      net/ipv6/seg6_iptunnel.o
+  CC      net/ipv4/sysctl_net_ipv4.o
+  CC      drivers/tty/tty_ioctl.o
+  CC      net/netfilter/nf_nat_redirect.o
+  CC      drivers/tty/tty_ldisc.o
+  CC      net/ipv4/proc.o
+  CC      net/ipv6/seg6_local.o
+  CC      net/netfilter/nf_nat_masquerade.o
+  CC      drivers/tty/tty_buffer.o
+  CC      net/ipv4/fib_rules.o
+  CC      drivers/tty/tty_port.o
+  CC      net/ipv6/seg6_hmac.o
+  CC      net/netfilter/nf_synproxy_core.o
+  CC      drivers/tty/tty_mutex.o
+  CC      net/ipv4/ipmr.o
+  CC      drivers/tty/tty_ldsem.o
+  CC      net/ipv6/addrconf_core.o
+  CC      drivers/tty/tty_baudrate.o
+  CC      drivers/tty/tty_jobctrl.o
+  CC      net/netfilter/x_tables.o
+  CC      drivers/tty/n_null.o
+  CC      net/ipv6/exthdrs_core.o
+  CC      drivers/tty/pty.o
+  CC      net/ipv4/ipmr_base.o
+  CC      drivers/tty/tty_audit.o
+  CC      net/ipv6/ip6_checksum.o
+  CC      drivers/tty/sysrq.o
+  CC      net/netfilter/xt_tcpudp.o
+  CC      net/ipv4/syncookies.o
+  CC      net/ipv6/ip6_icmp.o
+  CC      net/netfilter/xt_nat.o
+  AR      drivers/tty/built-in.a
+  AR      drivers/video/backlight/built-in.a
+  CC      drivers/video/console/dummycon.o
+  CC      drivers/video/console/vgacon.o
+  CC      net/netfilter/xt_NETMAP.o
+  CC      net/ipv4/ipconfig.o
+  CC      net/ipv6/output_core.o
+  AR      drivers/video/console/built-in.a
+  AR      drivers/video/fbdev/core/built-in.a
+  AR      drivers/video/fbdev/omap2/omapfb/displays/built-in.a
+  AR      drivers/video/fbdev/omap2/omapfb/dss/built-in.a
+  CC      net/netfilter/xt_REDIRECT.o
+  AR      drivers/video/fbdev/omap2/omapfb/built-in.a
+  AR      drivers/video/fbdev/omap2/built-in.a
+  AR      drivers/video/fbdev/built-in.a
+  AR      drivers/video/built-in.a
+  AR      drivers/virt/vboxguest/built-in.a
+  AR      drivers/virt/built-in.a
+  CC      drivers/virtio/virtio.o
+  CC      net/ipv4/netfilter.o
+  CC      net/ipv6/protocol.o
+  CC      net/netfilter/xt_MASQUERADE.o
+  CC      drivers/virtio/virtio_ring.o
+  CC      net/ipv4/tcp_cubic.o
+  CC      net/ipv6/ip6_offload.o
+  CC      net/netfilter/xt_addrtype.o
+  CC      net/ipv6/tcpv6_offload.o
+  CC      drivers/virtio/virtio_mmio.o
+  CC      net/ipv4/tcp_bpf.o
+  CC      net/netfilter/xt_conntrack.o
+  AR      drivers/virtio/built-in.a
+  AR      drivers/built-in.a
+  CC      net/ipv6/exthdrs_offload.o
+  CC      net/ipv6/inet6_hashtables.o
+  AR      net/netfilter/built-in.a
+  CC      net/ipv6/mcast_snoop.o
+  CC      net/netlabel/netlabel_user.o
+  CC      net/ipv4/cipso_ipv4.o
+  CC      net/ipv4/xfrm4_policy.o
+  CC      net/netlabel/netlabel_kapi.o
+  AR      net/ipv6/built-in.a
+  CC      net/netlabel/netlabel_domainhash.o
+  CC      net/netlink/af_netlink.o
+  CC      net/ipv4/xfrm4_state.o
+  CC      net/ipv4/xfrm4_input.o
+  CC      net/netlabel/netlabel_addrlist.o
+  CC      net/netlabel/netlabel_mgmt.o
+  CC      net/packet/af_packet.o
+  CC      net/ipv4/xfrm4_output.o
+  CC      net/netlabel/netlabel_unlabeled.o
+  CC      net/netlink/genetlink.o
+  CC      net/ipv4/xfrm4_protocol.o
+  CC      net/netlabel/netlabel_cipso_v4.o
+  AR      net/ipv4/built-in.a
+  CC      net/sched/sch_generic.o
+  CC      net/netlabel/netlabel_calipso.o
+  AR      net/netlink/built-in.a
+  CC      net/sched/sch_mq.o
+  AR      net/packet/built-in.a
+  CC      net/strparser/strparser.o
+  CC      net/unix/af_unix.o
+  AR      net/netlabel/built-in.a
+  CC      net/sched/sch_api.o
+  AR      net/strparser/built-in.a
+  CC      net/sched/sch_blackhole.o
+  CC      net/unix/garbage.o
+  CC      net/unix/sysctl_net_unix.o
+  CC      net/vmw_vsock/af_vsock.o
+  CC      net/sched/cls_api.o
+  CC      net/unix/scm.o
+  CC      net/vmw_vsock/af_vsock_tap.o
+  CC      net/vmw_vsock/vsock_addr.o
+  AR      net/unix/built-in.a
+  CC      net/sched/act_api.o
+  CC      net/vmw_vsock/diag.o
+  CC      net/xfrm/xfrm_policy.o
+  CC      net/vmw_vsock/virtio_transport.o
+  CC      net/vmw_vsock/virtio_transport_common.o
+  CC      net/sched/sch_fifo.o
+  CC      net/sched/ematch.o
+  CC      net/socket.o
+  AR      net/vmw_vsock/built-in.a
+  CC      net/compat.o
+  AR      net/sched/built-in.a
+  CC      net/xfrm/xfrm_state.o
+  CC      net/sysctl_net.o
+  CC      net/xfrm/xfrm_hash.o
+  CC      net/xfrm/xfrm_input.o
+  CC      net/xfrm/xfrm_output.o
+  CC      net/xfrm/xfrm_sysctl.o
+  CC      net/xfrm/xfrm_replay.o
+  CC      net/xfrm/xfrm_device.o
+  CC      net/xfrm/xfrm_proc.o
+  CC      net/xfrm/xfrm_algo.o
+  CC      net/xfrm/xfrm_user.o
+  AR      net/xfrm/built-in.a
+  AR      net/built-in.a
+  GEN     .version
+  CHK     include/generated/compile.h
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  MODINFO modules.builtin.modinfo
+  LD      .tmp_vmlinux.kallsyms1
+  KSYM    .tmp_vmlinux.kallsyms1.o
+  LD      .tmp_vmlinux.kallsyms2
+  KSYM    .tmp_vmlinux.kallsyms2.o
+  LD      vmlinux
+  SORTEX  vmlinux
+  SYSMAP  System.map
+  AS      arch/x86/boot/bioscall.o
+  CC      arch/x86/boot/a20.o
+  CC      arch/x86/boot/cmdline.o
+  Building modules, stage 2.
+  MODPOST 0 modules
+  AS      arch/x86/boot/copy.o
+  HOSTCC  arch/x86/boot/mkcpustr
+  CC      arch/x86/boot/cpuflags.o
+  CC      arch/x86/boot/cpucheck.o
+  CC      arch/x86/boot/early_serial_console.o
+  CC      arch/x86/boot/edd.o
+  CC      arch/x86/boot/main.o
+  CC      arch/x86/boot/memory.o
+  CC      arch/x86/boot/pm.o
+  AS      arch/x86/boot/pmjump.o
+  CC      arch/x86/boot/printf.o
+  CC      arch/x86/boot/regs.o
+  LDS     arch/x86/boot/compressed/vmlinux.lds
+  AS      arch/x86/boot/compressed/head_64.o
+  VOFFSET arch/x86/boot/compressed/../voffset.h
+  CC      arch/x86/boot/compressed/string.o
+  CC      arch/x86/boot/string.o
+  CC      arch/x86/boot/tty.o
+  CC      arch/x86/boot/compressed/cmdline.o
+  CC      arch/x86/boot/compressed/error.o
+  CC      arch/x86/boot/video.o
+  OBJCOPY arch/x86/boot/compressed/vmlinux.bin
+  CC      arch/x86/boot/video-mode.o
+  HOSTCC  arch/x86/boot/compressed/mkpiggy
+  CC      arch/x86/boot/compressed/cpuflags.o
+  CC      arch/x86/boot/version.o
+  CC      arch/x86/boot/video-vga.o
+  CC      arch/x86/boot/compressed/early_serial_console.o
+  CC      arch/x86/boot/video-vesa.o
+  CC      arch/x86/boot/video-bios.o
+  AS      arch/x86/boot/compressed/mem_encrypt.o
+  HOSTCC  arch/x86/boot/tools/build
+  CC      arch/x86/boot/compressed/pgtable_64.o
+  CC      arch/x86/boot/compressed/acpi.o
+  CPUSTR  arch/x86/boot/cpustr.h
+  CC      arch/x86/boot/cpu.o
+  CC      arch/x86/boot/compressed/misc.o
+  GZIP    arch/x86/boot/compressed/vmlinux.bin.gz
+  MKPIGGY arch/x86/boot/compressed/piggy.S
+  AS      arch/x86/boot/compressed/piggy.o
+  LD      arch/x86/boot/compressed/vmlinux
+  ZOFFSET arch/x86/boot/zoffset.h
+  OBJCOPY arch/x86/boot/vmlinux.bin
+  AS      arch/x86/boot/header.o
+  LD      arch/x86/boot/setup.elf
+  OBJCOPY arch/x86/boot/setup.bin
+  BUILD   arch/x86/boot/bzImage
+Setup is 16380 bytes (padded to 16384 bytes).
+System is 6701 kB
+CRC d28378a0
+Kernel: arch/x86/boot/bzImage is ready  (#1)
+Done!
+Kernel binary placed in: /tmp/tmp.JoFxhJO7Ni/linux-5.4.81/arch/x86/boot/bzImage

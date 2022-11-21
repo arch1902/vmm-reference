@@ -1,0 +1,39 @@
+
+
+Usage: dropbear [options]
+-b bannerfile   Display the contents of bannerfile before user login
+                (default: none)
+-r keyfile      Specify hostkeys (repeatable)
+                defaults: 
+                - dss /etc/dropbear/dropbear_dss_host_key
+                - rsa /etc/dropbear/dropbear_rsa_host_key
+                - ecdsa /etc/dropbear/dropbear_ecdsa_host_key
+                - ed25519 /etc/dropbear/dropbear_ed25519_host_key
+-R              Create hostkeys as required
+-F              Don't fork into background
+-e              Pass on server process environment to child process
+-E              Log to stderr rather than syslog
+-m              Don't display the motd on login
+-w              Disallow root logins
+-G              Restrict logins to members of specified group
+-s              Disable password logins
+-g              Disable password logins for root
+-B              Allow blank password logins
+-T              Maximum authentication tries (default 10)
+-j              Disable local port forwarding
+-k              Disable remote port forwarding
+-a              Allow connections to forwarded ports from any host
+-c command      Force executed command
+-p [address:]port
+                Listen on specified tcp port (and optionally address),
+                up to 10 can be specified
+                (default port is 22 if none specified)
+-P PidFile      Create pid file PidFile
+                (default /var/run/dropbear.pid)
+-i              Start for inetd
+-W <receive_window_buffer> (default 24576, larger may be faster, max 10MB)
+-K <keepalive>  (0 is never, default 0, in seconds)
+-I <idle_timeout>  (0 is never, default 0, in seconds)
+V    Version
+
+

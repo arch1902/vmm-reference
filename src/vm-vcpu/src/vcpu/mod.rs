@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: Apache-2.0 OR BSD-3-Clause
 //
 use libc::siginfo_t;
+use std::fs;
+use core::num;
 use std::cell::RefCell;
 use std::ffi::c_void;
 use std::io::{self, stdin};
@@ -220,6 +222,8 @@ pub struct VcpuConfig {
     // This is just a workaround so that we can get a list of MSRS.
     // Just getting all the MSRS on a vcpu is not possible with KVM.
     pub msrs: Msrs,
+    /// starter script path
+    pub starter_path: String,
 }
 
 #[derive(Clone)]
@@ -229,7 +233,7 @@ pub struct VcpuConfigList {
 
 impl VcpuConfigList {
     /// Creates a default configuration list for vCPUs.
-    pub fn new(_kvm: &Kvm, num_vcpus: u8) -> Result<Self> {
+    pub fn new(_kvm: &Kvm, num_vcpus: u8, starter_path: String,) -> Result<Self> {
         if num_vcpus == 0 {
             return Err(Error::VcpuNumber(num_vcpus));
         }
@@ -255,6 +259,7 @@ impl VcpuConfigList {
                 cpuid,
                 id: index,
                 msrs: supported_msrs.clone(),
+                starter_path: starter_path.clone(),
             };
             #[cfg(target_arch = "aarch64")]
             let vcpu_config = VcpuConfig { id: index };
@@ -686,23 +691,59 @@ impl KvmVcpu {
         self.init_tls()?;
 
         self.run_barrier.wait();
+        let mut cnt = 0;
+        let mut idx = 0;
+
+        let start: [u8; 4] = [196, 97, 96, 96];
+        // echo hi
+        let mut file_content = "\n".to_string();
+        if self.config.starter_path != "" {
+            file_content = fs::read_to_string(self.config.starter_path.clone()).expect("File not found at #{self.config.starter_path}");
+        }
+        let mut asci_cmd: Vec<u8> = Vec::new();
+        for c in file_content.chars() {
+            asci_cmd.push(c as u8);
+        }
+
+        // Number of commands to run on VM
+        let asci_cmds = Vec::from([asci_cmd]);
+        let mut num_cmds = 0;
+        let tot_cmds = 1;
+
+        // FSM to decide when to run the commands. s0 will be true if we see a '/'. s1 will be true if we see a '/ #' and haven't run all the commands
+        // s2 will be true after running a command
+        let mut s0 = false;
+        let mut s1 = false;
+        let mut s2 = false;
+        let mut done = false;
+        let mut space = 0;
+        let mut cmd_idx = 0;
+        let mut l = 0;
         'vcpu_run: loop {
             let mut interrupted_by_signal = false;
+            
             match self.vcpu_fd.run() {
                 Ok(exit_reason) => {
                     // println!("{:#?}", exit_reason);
                     match exit_reason {
                         VcpuExit::Shutdown | VcpuExit::Hlt => {
+                            // println!("hlt");
+                            cnt = cnt + 1;
+                            
                             println!("Guest shutdown: {:?}. Bye!", exit_reason);
                             if stdin().lock().set_canon_mode().is_err() {
                                 eprintln!("Failed to set canon mode. Stdin will not echo.");
                             }
                             self.run_state.set_and_notify(VmRunState::Exiting);
+                            // println!("{}", cnt);
                             break;
                         }
                         VcpuExit::IoOut(addr, data) => {
+                            // println!("io out");
+                            cnt = cnt + 1;
                             if (0x3f8..(0x3f8 + 8)).contains(&addr) {
                                 // Write at the serial port.
+                                // !(s2 && data[0] == 63) && 
                                 if self
                                     .device_mgr
                                     .lock()
@@ -711,6 +752,29 @@ impl KvmVcpu {
                                     .is_err()
                                 {
                                     debug!("Failed to write to serial port");
+                                }
+
+                                if !done && data[0] == 47{
+                                    s0 = true;
+                                    space = 0;
+                                }
+                                else if !done && s0{
+                                    space = space + 1;
+                                    if space == 2 && data[0] == 35{
+                                        if s2 && num_cmds == tot_cmds
+                                        {
+                                            s2 = false;
+                                            done = true;
+                                        }
+                                        else
+                                        {
+                                            cmd_idx = 0;
+                                            s1 = true;
+                                        }
+                                    }
+                                    else if space == 2 && data[0] != 35{
+                                        s0 = false;
+                                    }
                                 }
                             } else if addr == 0x060 || addr == 0x061 || addr == 0x064 {
                                 // Write at the i8042 port.
@@ -733,8 +797,15 @@ impl KvmVcpu {
                             }
                         }
                         VcpuExit::IoIn(addr, data) => {
+                            // data = &mut x[idx];
+                            // let mut y: [u8; 1] = [99];
+                            
+                            // data = &[99 as u8];
+                            // cnt = cnt + 1;
                             if (0x3f8..(0x3f8 + 8)).contains(&addr) {
+                                // data[0] = 99;
                                 // Read from the serial port.
+                                
                                 if self
                                     .device_mgr
                                     .lock()
@@ -744,11 +815,43 @@ impl KvmVcpu {
                                 {
                                     debug!("Failed to read from serial port");
                                 }
-                            } else {
+                                if s1
+                                {
+                                    if idx == 2{
+                                        // if num_cmds == 0{
+                                        //     data[0] = cmd2[cmd_idx];
+                                        //     l = cmd2.len();
+                                        // }
+                                        // else{
+                                        //     data[0] = cmd3[cmd_idx];
+                                        //     l = cmd3.len();
+                                        // }
+                                        data[0] = asci_cmds[num_cmds][cmd_idx];
+                                        l = asci_cmds[num_cmds].len();
+                                        cmd_idx += 1;
+                                    }
+                                    else if idx < 2{
+                                        data[0] = start[idx];
+                                    }
+                                    else{
+                                        data[0] = start[idx - 1];
+                                    }
+                                    idx = (idx + 1)%(start.len() + 1);
+                                    if(cmd_idx == l && idx == 0){
+                                        s0 = false;
+                                        s1 = false;
+                                        s2 = true;
+                                        num_cmds += 1;
+                                    }                                
+                                }
+                            } else {  
                                 // Read from some other port.
                             }
+                            
                         }
                         VcpuExit::MmioRead(addr, data) => {
+                            // println!("mmio read");
+                            cnt = cnt + 1;
                             if self
                                 .device_mgr
                                 .lock()
@@ -760,6 +863,8 @@ impl KvmVcpu {
                             }
                         }
                         VcpuExit::MmioWrite(addr, data) => {
+                            // println!("mmio write");
+                            cnt = cnt + 1;
                             if self
                                 .device_mgr
                                 .lock()
@@ -772,6 +877,7 @@ impl KvmVcpu {
                         }
                         #[cfg(target_arch = "aarch64")]
                         VcpuExit::SystemEvent(type_, flags) => match type_ {
+                            // cnt = cnt + 1;
                             KVM_SYSTEM_EVENT_SHUTDOWN
                             | KVM_SYSTEM_EVENT_RESET
                             | KVM_SYSTEM_EVENT_CRASH => {
@@ -788,6 +894,8 @@ impl KvmVcpu {
                             }
                         },
                         _other => {
+                            // println!("others");
+                            cnt = cnt + 1;
                             // Unhandled KVM exit.
                             debug!("Unhandled vcpu exit: {:#?}", _other);
                         }

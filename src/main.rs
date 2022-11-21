@@ -15,6 +15,7 @@ fn main() {
             .collect(),
     ) {
         Ok(vmm_config) => {
+            println!("Vmm configuration: {:?}", vmm_config);
             let mut vmm =
                 Vmm::try_from(vmm_config).expect("Failed to create VMM from configurations");
             // For now we are just unwrapping here, in the future we might use a nicer way of

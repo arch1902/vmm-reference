@@ -93,6 +93,33 @@ mount -t sysfs none /sys
 /bin/echo "                                                   "
 /bin/echo "                                                   "
 /bin/echo "Hello, world, from the rust-vmm reference VMM!"
+cp /dropbear/usr/local/sbin/* /bin/
+cp /dropbear/usr/local/bin/* /bin/
+cp /bash/usr/local/bin/* /bin/
+mkdir /etc/dropbear
+mkdir /etc/default
+dropbearkey -t rsa -f /etc/dropbear/dropbear_rsa_host_key > dump.txt
+dropbearkey -t dss -f /etc/dropbear/dropbear_dss_host_key > dump.txt
+dropbearkey -t ecdsa -f /etc/dropbear/dropbear_ecdsa_host_key > dump.txt
+dropbearkey -t ed25519 -f /etc/dropbear/dropbear_ed25519_host_key > dump.txt
+echo "NO_START=0" > /etc/default/dropbear
+echo "# the TCP port that Dropbear listens on" >> /etc/default/dropbear
+echo "DROPBEAR_PORT=22" >> /etc/default/dropbear
+echo "# any additional arguments for Dropbear" >> /etc/default/dropbear
+echo "DROPBEAR_EXTRA_ARGS="-s"" >> /etc/default/dropbear
+echo "# specify an optional banner file containing a message to be" >> /etc/default/dropbear
+echo "# sent to clients before they connect, such as "/etc/issue.net"" >> /etc/default/dropbear
+echo "DROPBEAR_BANNER="SSH functionality working "" >> /etc/default/dropbear
+echo "# RSA hostkey file (default: /etc/dropbear/dropbear_rsa_host_key)" >> /etc/default/dropbear
+echo "DROPBEAR_RSAKEY="/etc/dropbear/dropbear_rsa_host_key"" >> /etc/default/dropbear
+echo "# DSS hostkey file (default: /etc/dropbear/dropbear_dss_host_key)" >> /etc/default/dropbear
+echo "DROPBEAR_DSSKEY="/etc/dropbear/dropbear_dss_host_key"" >> /etc/default/dropbear
+mkdir /dev/pts
+mount -t devpts /dev/pts /dev/pts
+mdev -s
+touch /etc/passwd
+chmod +x /bin/python3
+
 EOF
 
     if [ -z "$halt" ]; then

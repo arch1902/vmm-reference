@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0 OR BSD-3-Clause
 //! Reference VMM built with rust-vmm components and minimal glue.
 #![deny(missing_docs)]
-
 use std::convert::TryFrom;
 #[cfg(target_arch = "aarch64")]
 use std::convert::TryInto;
@@ -222,6 +221,7 @@ impl WrappedExitHandler {
 
 impl ExitHandler for WrappedExitHandler {
     fn kick(&self) -> io::Result<()> {
+        // println!("EXIT");
         self.0.lock().unwrap().exit_event.write(1)
     }
 }
@@ -261,7 +261,7 @@ impl TryFrom<VMMConfig> for Vmm {
         let device_mgr = Arc::new(Mutex::new(IoManager::new()));
 
         // Create the KvmVm.
-        let vm_config = VmConfig::new(&kvm, config.vcpu_config.num)?;
+        let vm_config = VmConfig::new(&kvm, config.vcpu_config.num, config.kernel_config.clone().starter_path)?;
 
         let wrapped_exit_handler = WrappedExitHandler::new()?;
         let vm = KvmVm::new(
@@ -325,6 +325,7 @@ impl Vmm {
 
         self.vm.run(Some(kernel_load_addr)).map_err(Error::Vm)?;
         loop {
+            // println!("{}", self.kernel_cfg.cmdline.as_str());
             match self.event_mgr.run() {
                 Ok(_) => (),
                 Err(e) => eprintln!("Failed to handle events: {:?}", e),

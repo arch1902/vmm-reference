@@ -117,11 +117,12 @@ fi
 target=$(kernel_target "$KERNEL_FMT")
 make_kernel "$kernel_dir" "$KERNEL_FMT" "$target" "$MAKEPROCS" "$KERNEL_BINARY_NAME"
 
+cp $kernel_dir/$KERNEL_BINARY_NAME /home/arpitchauhan/Desktop/sem7/COL732/vmm-reference/resources/kernel
+
 # Final step: profit!
 echo "Done!"
 echo "Kernel binary placed in: $kernel_dir/$KERNEL_BINARY_NAME"
 echo ".deb packages placed in:"
 ls -1 "$kernel_dir"/deb/*.deb
 
-cleanup
 exit 0
